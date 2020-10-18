@@ -9,10 +9,12 @@
 body {
   background-color: #f4f4f4;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
   width: 0px;
+  height: 0px;
 }
 
 .container {
@@ -27,18 +29,21 @@ a {
 /* HEADER */
 
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   --bg-color: rgba(0, 85, 14, 1);
   --box-shadow: #000000 0px 0px 20px 0px;
   font-family: "Playfair Display SC", serif;
   z-index: 999;
   min-height: 70px;
   width: 100%;
-  text-align: right;
   color: #ffffff;
   background-color: var(--bg-color);
   position: fixed;
   transition: 500ms ease-in-out;
   box-shadow: var(--box-shadow);
+  padding: 0 20px 0 20px;
 }
 
 .header-transparant {
@@ -50,39 +55,42 @@ header a {
   color: #ffffff;
 }
 
-header .branding h1 {
-  float: left;
-  margin: 11px;
+header .branding {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -5px;
+  white-space: pre;
 }
 
 header .branding img {
-  margin: 10px 0px 10px 20px;
+  margin: 10px;
   height: 50px;
-  float: left;
 }
 
-header nav ul {
+nav ul {
+  display: flex;
+  align-items: center;
   list-style: none;
-  display: inline-flex;
-  margin-right: 20px;
+  height: 100%;
 }
 
-header nav ul li {
-  font-size: 24;
-  margin: 10px 5px;
-  padding: 15px;
+nav a {
+  display: block;
+  margin: 5px;
+  padding: 13px;
   border-radius: 5px;
 }
 
-header nav ul li:hover {
+nav a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* SHOWCASE */
 
 .showcase {
-  min-height: 750px;
-  background: url(../img/kampvuur.jpg) no-repeat 0px -70px;
+  height: 100vh;
+  background: url(../img/kampvuur.jpg) no-repeat center center;
   background-size: cover;
   text-align: center;
   color: #ffffff;
@@ -92,7 +100,7 @@ header nav ul li:hover {
 .showcase img {
   margin-top: 120px;
   height: 350px;
-  transition: 1000ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .showcase img:hover {
@@ -179,4 +187,19 @@ header nav ul li:hover {
 
 .card:hover .back {
   transform: perspective(600px) rotateY(0deg);
+}
+
+@media screen and (max-width: 825px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header:not(.header-transparant) {
+    flex-direction: row;
+  }
+
+  header:not(.header-transparant) .branding h1 {
+    display: none;
+  }
 }

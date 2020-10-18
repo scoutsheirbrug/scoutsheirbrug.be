@@ -1,14 +1,7 @@
 const header = document.querySelector("header");
 const showcase = document.querySelector(".showcase");
 
-const showcaseOptions = {
-  rootMargin: "-150px 0px 0px 0px",
-};
-
-const showcaseObserver = new IntersectionObserver(function (
-  entries,
-  showcaseObserver
-) {
+const showcaseObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       header.classList.remove("header-transparant");
@@ -16,7 +9,6 @@ const showcaseObserver = new IntersectionObserver(function (
       header.classList.add("header-transparant");
     }
   });
-},
-showcaseOptions);
+}, { threshold: 0.5 });
 
 showcaseObserver.observe(showcase);
