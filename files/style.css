@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GOBAL */
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Open Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  --bg-color: rgba(0, 85, 14, 1);
+  --box-shadow: #000000 0px 0px 20px 0px;
+  font-family: "Playfair Display SC", serif;
+  z-index: 999;
+  min-height: 70px;
+  width: 100%;
+  text-align: right;
+  color: #ffffff;
+  background-color: var(--bg-color);
+  position: fixed;
+  transition: 500ms ease-in-out;
+  box-shadow: var(--box-shadow);
+}
+
+.header-transparant {
+  --bg-color: rgba(0, 85, 14, 0);
+  --box-shadow: none;
+}
+
+header a {
+  color: #ffffff;
+}
+
+header .branding h1 {
+  float: left;
+  margin: 11px;
+}
+
+header .branding img {
+  margin: 10px 0px 10px 20px;
+  height: 50px;
+  float: left;
+}
+
+header nav ul {
+  list-style: none;
+  display: inline-flex;
+  margin-right: 20px;
+}
+
+header nav ul li {
+  font-size: 24;
+  margin: 10px 5px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+header nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* SHOWCASE */
+
+.showcase {
+  min-height: 750px;
+  background: url(../img/kampvuur.jpg) no-repeat 0px -70px;
+  background-size: cover;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Playfair Display SC", serif;
+}
+
+.showcase img {
+  margin-top: 120px;
+  height: 350px;
+  transition: 1000ms ease-in-out;
+}
+
+.showcase img:hover {
+  margin-top: 70px;
+  height: 500px;
+}
+
+/* SLIDESHOW */
+
+.section-slideshow {
+  height: 600px;
+}
+
+/* CARDS */
+
+.section-cards {
+  padding: 50px 0px;
+  background-color: #c4d6a6;
+}
+
+.cards {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.front,
+.back {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  transition: transform 0.6s ease-in-out;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: #000000 0px 0px 15px 0px;
+}
+
+.back {
+  position: absolute;
+  top: 0px;
+}
+
+.front-content,
+.back-content {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.back-content h4 {
+  margin: 15px 0px 5px 0px;
+}
+
+.back-content p {
+  font-size: 12px;
+  margin: 10px 0px;
+}
+
+.back-content .mini {
+  width: 95%;
+  margin: auto;
+  font-size: 11px;
+  text-align: justify;
+}
+
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(0deg);
+}
