@@ -4,11 +4,11 @@ const showcase = document.querySelector(".showcase");
 const showcaseObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
-      header.classList.remove("header-transparant");
+      header.classList.add("scrolled");
     } else {
-      header.classList.add("header-transparant");
+      header.classList.remove("scrolled");
     }
   });
-}, { threshold: 0.5 });
+}, { rootMargin: '-150px 0px 0px 0px' });
 
 showcaseObserver.observe(showcase);
