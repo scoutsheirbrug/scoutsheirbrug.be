@@ -101,12 +101,34 @@ nav > a img {
 /* SHOWCASE */
 
 .showcase {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  background: url(../img/kampvuur.jpg) no-repeat center center;
+  padding: 140px 40px 40px 40px;
+  background: url(../img/kampvuur.jpg) no-repeat center 0;
+  font-size: 14px;
   background-size: cover;
-  text-align: center;
   color: #ffffff;
-  font-family: "Playfair Display SC", serif;
+}
+
+.showcase .action {
+  width: 230px;
+  margin: 10px;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  filter: drop-shadow(0 0 0.3em #000);
+}
+
+.showcase .action.highlighted {
+  mix-blend-mode: screen;
+  background: #fff;
+  color: #000;
 }
 
 /* SECTIONS */
@@ -142,5 +164,9 @@ nav > a img {
 
   header.scrolled nav ul {
     margin-left: 40px;
+  }
+
+  .showcase {
+    flex-direction: column;
   }
 }
