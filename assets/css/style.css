@@ -119,7 +119,7 @@ nav li.active a {
 
 .showcase {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -133,6 +133,17 @@ nav li.active a {
   height: 160px;
   padding: 40px;
   background-position: center center;
+}
+
+.showcase img {
+  width: 300px;
+  margin: 0 0 20px 0;
+}
+
+.showcase .actions {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .showcase .action {
@@ -250,7 +261,11 @@ section embed {
     margin-left: 40px;
   }
 
-  .showcase {
+  .showcase img {
+    width: 250px;
+  }
+
+  .showcase .actions {
     flex-direction: column;
   }
 
