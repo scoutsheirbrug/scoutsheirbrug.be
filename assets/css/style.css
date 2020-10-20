@@ -6,10 +6,14 @@
 
 /* GOBAL */
 
+html {
+  overflow-x: hidden;
+}
+
 body {
-  background-color: var(--light);
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
+  background-color: #cfcecd;
 }
 
 body::-webkit-scrollbar {
@@ -18,7 +22,8 @@ body::-webkit-scrollbar {
 }
 
 .container {
-  width: 85%;
+  width: 80%;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -107,11 +112,17 @@ nav > a img {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 140px 40px 40px 40px;
+  padding: 180px 40px 40px 40px;
   background: url(../img/kampvuur.jpg) no-repeat center 0;
   font-size: 14px;
   background-size: cover;
   color: #ffffff;
+}
+
+.banner {
+  height: 160px;
+  padding: 40px;
+  background-position: center center;
 }
 
 .showcase .action {
@@ -127,16 +138,50 @@ nav > a img {
 }
 
 .showcase .action.highlighted {
-  mix-blend-mode: screen;
   background: #fff;
   color: #000;
 }
 
 /* SECTIONS */
 
+section {
+  padding: 10px;
+}
+
+section p {
+  padding-bottom: 10px;
+}
+
+section ul {
+  padding-left: 25px;
+}
+
+section h2 {
+  margin-top: 25px;
+  font-weight: normal;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin: 4px 0 14px 0;
+  border-bottom: 2px dashed;
+}
+
+section img {
+  max-width: 100%;
+}
+
+section embed {
+  margin-top: 30px;
+  width: 100%;
+  height: 100vh;
+}
+
 .slideshow {
   height: 400px;
-  background-color: #b4b0ae;
+  background-color: #cfcecd;
 }
 
 .takken {
@@ -149,7 +194,33 @@ nav > a img {
   background-color: #ac3100;
 }
 
-@media screen and (max-width: 600px) {
+.sjorring {
+  color: #fff;
+  background-color: #060d11;
+}
+
+.inschrijven {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b1ccd8;
+}
+
+.inschrijven iframe {
+  width: 100%;
+  height: 1780px;
+}
+
+.contact em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (max-width: 740px) {
+  .container {
+    width: 90%;
+  }
+
   header {
     flex-direction: column;
     align-items: center;
@@ -169,5 +240,15 @@ nav > a img {
 
   .showcase {
     flex-direction: column;
+  }
+
+  .inschrijven iframe {
+    height: 1900px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .inschrijven iframe {
+    height: 1410px;
   }
 }

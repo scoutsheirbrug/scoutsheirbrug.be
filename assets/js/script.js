@@ -11,4 +11,8 @@ const showcaseObserver = new IntersectionObserver((entries) => {
   });
 }, { rootMargin: '-150px 0px 0px 0px' });
 
-showcaseObserver.observe(showcase);
+if (showcase) {
+  showcaseObserver.observe(showcase);
+} else {
+  header.classList.add("scrolled");
+}

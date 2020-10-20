@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Scouts Heirbrug</title>
-  <link rel="icon" href="./img/icon.png" />
-  <link rel="stylesheet" href="./files/style.css" />
+  <title>{{ page.title }} | Scouts Heirbrug</title>
+  <link rel="icon" href="/assets/img/icon.png" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -15,28 +15,22 @@
 <body>
   <header>
     <a class="branding" href="/">
-      <img src="./img/logo.svg" alt="" />
+      <img src="/assets/img/logo.svg" alt="" />
       <h1>Scouts Heirbrug</h1>
     </a>
     <nav>
       <a href="/">
-        <img src="./img/logo.svg" alt="" />
+        <img src="/assets/img/logo.svg" alt="" />
       </a>
       <ul>
-        <li><a href="#">Sjorring</a></li>
-        <li><a href="#">Verhuur</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/sjorring">Sjorring</a></li>
+        <li><a href="/verhuur">Verhuur</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <section class="showcase">
-    <a href="/sjorring" class="action highlighted">Onze activiteiten</a>
-    <a href="/inschrijven" class="action">Lid worden</a>
-  </section>
-  <section class="slideshow"></section>
-  <section class="takken"></section>
-  <section class="uniform"></section>
-  <script src="./files/script.js"></script>
+  {{ content }}
+  <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
