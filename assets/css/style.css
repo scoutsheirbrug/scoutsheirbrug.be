@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --accent-color: #071d2b;
+  --accent-light: #7eb8dd;
 }
 
 /* GOBAL */
@@ -13,7 +15,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
-  background-color: #cfcecd;
+  background-color: #f4f4f4;
 }
 
 body::-webkit-scrollbar {
@@ -49,7 +51,7 @@ header {
 }
 
 header.scrolled {
-  background-color: #071d2b;
+  background-color: var(--accent-color);
   box-shadow: #000 0px 0px 20px 0px;
 }
 
@@ -70,6 +72,10 @@ header .branding {
 header .branding img {
   margin-right: 10px;
   height: 50px;
+}
+
+nav {
+  height: 65px;
 }
 
 nav ul {
@@ -100,8 +106,13 @@ nav > a {
 }
 
 nav > a img {
-  height: 34px;
+  height: 45px;
   margin: 10px;
+}
+
+nav li.hhlight a {
+  font-weight: bold;
+  color: var(--accent-light);
 }
 
 /* SHOWCASE */
@@ -162,7 +173,7 @@ section h2 {
 }
 
 section h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   margin: 4px 0 14px 0;
@@ -174,9 +185,8 @@ section img {
 }
 
 section embed {
-  margin-top: 30px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 65px);
 }
 
 .slideshow {
@@ -195,8 +205,8 @@ section embed {
 }
 
 .sjorring {
+  padding: 65px 0 0 0;
   color: #fff;
-  background-color: #060d11;
 }
 
 .inschrijven {
