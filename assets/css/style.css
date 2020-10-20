@@ -74,11 +74,11 @@ header .branding img {
   height: 50px;
 }
 
-nav {
+header nav {
   height: 65px;
 }
 
-nav ul {
+header nav ul {
   display: flex;
   align-items: center;
   list-style: none;
@@ -86,18 +86,18 @@ nav ul {
   transition: margin-left 0.2s ease-in-out;
 }
 
-nav li a {
+header nav li a {
   display: block;
   margin: 5px;
   padding: 13px;
   border-radius: 5px;
 }
 
-nav li a:hover {
+header nav li a:hover {
   background-color: #fff3;
 }
 
-nav > a {
+header nav > a {
   position: absolute;
   left: 10px;
   top: 65px;
@@ -105,12 +105,12 @@ nav > a {
   transition: 0.2s ease-in-out;
 }
 
-nav > a img {
+header nav > a img {
   height: 45px;
   margin: 10px;
 }
 
-nav li.active a {
+header nav li.active a {
   font-weight: bold;
   color: var(--accent-light);
 }
@@ -129,11 +129,6 @@ nav li.active a {
   color: #ffffff;
 }
 
-.banner {
-  height: 160px;
-  padding: 40px;
-  background-position: center center;
-}
 
 .showcase .action {
   width: 230px;
@@ -162,8 +157,9 @@ section + section {
   padding-top: unset;
 }
 
+section ul,
 section p {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 section ul {
@@ -202,9 +198,134 @@ section embed {
   background-color: #060d11;
 }
 
-.uniform {
-  height: 450px;
-  background-color: #ac3100;
+/* GROEPSADMIN */
+
+.groepsadmin {
+  padding: 20px 0;
+  background-color: #263741;
+  color: #fff;
+}
+
+.groepsadmin .container {
+  overflow: hidden;
+}
+
+.groepsadmin .steps {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.groepsadmin .step {
+  width: 20%;
+  height: 100%;
+  transition: 0.6s;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.groepsadmin .step.step-content {
+  display: unset;
+}
+
+.groepsadmin .step .step-content {
+  width: 100%;
+}
+
+.groepsadmin .step h3 {
+  padding-bottom: 10px;
+}
+
+.groepsadmin .step a:not(.step-link) {
+  color: var(--accent-light);
+}
+
+.groepsadmin .step em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.groepsadmin .step .step-aside {
+  width: 30%;
+  margin-left: 10px;
+}
+
+.groepsadmin nav {
+  display: flex;
+  justify-content: center;
+}
+
+.groepsadmin .step-link {
+  width: 80px;
+  display: inline-block;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  margin: 0 4px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.3em #000);
+  transition: 0.4s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.groepsadmin .step-link.active,
+.groepsadmin .step-link:hover {
+  background: #fff;
+  font-weight: bold;
+  color: #000;
+}
+
+.groepsadmin .step-link-large {
+  width: 120px;
+  font-size: 17px;
+  padding: 2px 10px;
+  margin-left: 0;
+  border-width: 3px;
+}
+
+.ga-btn {
+  white-space: nowrap;
+  padding: 4px 8px;
+  margin: 0 6px;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ga-btn svg {
+  fill: currentColor;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: -1.5px;
+}
+
+.ga-steekkaart {
+  color: #fff;
+  background-color: #748d26;
+  border: 1px solid #637921;
+}
+
+.ga-opslaan {
+  color: #fff;
+  background-color: #f0750b;
+}
+
+.ga-registratie {
+  height: 50px;
+  color: #bdd732;
+  border: 3px solid;
+  border-radius: 131px;
 }
 
 .sjorring {
@@ -256,6 +377,27 @@ section embed {
 
   .inschrijven iframe {
     height: 1900px;
+  }
+
+  .groepsadmin .step {
+    display: unset;
+  }
+
+  .groepsadmin .step .step-content {
+    padding-bottom: 20px;
+  }
+
+  .groepsadmin .step .step-aside {
+    width: 100%;
+    margin-left: unset;
+  }
+
+  .groepsadmin .step a {
+    font-size: 13px;
+  }
+
+  .groepsadmin nav a span {
+    display: none;
   }
 }
 
