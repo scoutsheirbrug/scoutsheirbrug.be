@@ -12,7 +12,7 @@ module Jekyll
           redirect.render(site.layouts, site.site_payload)
           redirect.write(site.dest)
           site.pages << redirect
-        end     
+        end
       end
     end
   end

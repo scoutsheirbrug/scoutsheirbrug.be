@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl" {% if page.no_scroll == true %}style="overflow-y: hidden;"{% endif %}>
 
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header>
+  <header {% if page.transparent_header != true %}class="scrolled"{% endif %}>
     <a class="branding" href="/">
       <img src="/assets/img/logo.svg" alt="" />
       <h1>Scouts Heirbrug</h1>
@@ -23,9 +23,15 @@
         <img src="/assets/img/logo.svg" alt="" />
       </a>
       <ul>
-        <li {% if page.hhlight == "sjorring" %}class="hhlight"{% endif %}><a href="/sjorring">Sjorring</a></li>
-        <li><a href="/verhuur">Verhuur</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li {% if page.url == '/sjorring/' %}class="active"{%endif%}>
+          <a href="/sjorring">Sjorring</a>
+        </li>
+        <li {% if page.url == '/verhuur/' %}class="active"{%endif%}>
+          <a href="/verhuur">Verhuur</a>
+        </li>
+        <li {% if page.url == '/contact/' %}class="active"{%endif%}>
+          <a href="/contact">Contact</a>
+        </li>
       </ul>
     </nav>
   </header>

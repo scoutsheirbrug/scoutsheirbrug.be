@@ -110,7 +110,7 @@ nav > a img {
   margin: 10px;
 }
 
-nav li.hhlight a {
+nav li.active a {
   font-weight: bold;
   color: var(--accent-light);
 }
@@ -123,7 +123,6 @@ nav li.hhlight a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 180px 40px 40px 40px;
   background: url(../img/kampvuur.jpg) no-repeat center 0;
   font-size: 14px;
   background-size: cover;
@@ -156,7 +155,11 @@ nav li.hhlight a {
 /* SECTIONS */
 
 section {
-  padding: 10px;
+  padding: 80px 10px 10px 10px;
+}
+
+section + section {
+  padding-top: unset;
 }
 
 section p {
@@ -213,7 +216,6 @@ section embed {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #b1ccd8;
 }
 
 .inschrijven iframe {
