@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 
 .container {
   width: 80%;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -167,26 +168,28 @@ header nav li.active a {
 
 .about-us .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .about-us .eye-catcher {
   position: relative;
-  width: 30%;
-  height: 300px;
-  border-left: 10px solid var(--accent-color);
+  width: 300px;
+  flex-basis: 30%;
+  min-height: 200px;
+  border-top: 10px solid var(--accent-color);
 }
 
 .about-us .eye-catcher h3 {
   position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
+  top: 10px;
+  text-align: center;
   font-size: 36px;
 }
 
 .about-us .articles {
-  width: 70%;
+  flex-basis: 70%;
+  height: 70%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -194,15 +197,12 @@ header nav li.active a {
 .about-us .articles article {
   width: 33%;
   padding: 20px;
+  text-align: justify;
 }
 
 .about-us .articles article h4 {
   font-size: 16px;
   padding: 5px 0;
-}
-
-.about-us .articles article p {
-  text-align: justify;
 }
 
 /* SECTIONS */
@@ -248,7 +248,6 @@ section embed {
 
 .slideshow {
   height: 400px;
-  background-color: #cfcecd;
 }
 
 .takken {
@@ -282,6 +281,7 @@ section embed {
   display: flex;
   align-items: flex-start;
   overflow: hidden;
+  text-align: justify;
 }
 
 .groepsadmin .step.step-content {
@@ -407,6 +407,7 @@ section embed {
   font-style: normal;
 }
 
+/* Small */
 @media screen and (max-width: 740px) {
   .container {
     width: 90%;
@@ -441,6 +442,10 @@ section embed {
     height: 1900px;
   }
 
+  .about-us .articles article {
+    width: 50%;
+  }
+
   .groepsadmin .step {
     display: unset;
   }
@@ -454,17 +459,50 @@ section embed {
     margin-left: unset;
   }
 
-  .groepsadmin .step a {
+  .groepsadmin .step-content a:not(.step-link) {
     font-size: 13px;
   }
 
-  .groepsadmin nav a span {
+  .groepsadmin .step-link span {
     display: none;
+  }
+
+  .groepsadmin nav .step-link {
+    width: 60px;
   }
 }
 
+/* Large */
 @media screen and (min-width: 980px) {
   .inschrijven iframe {
     height: 1410px;
+  }
+
+  .about-us .container {
+    flex-direction: row;
+  }
+
+  .about-us .eye-catcher {
+    height: 300px;
+    border-top: none;
+    border-left: 10px solid var(--accent-color);
+  }
+
+  .about-us .eye-catcher h3 {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: unset;
+  }
+
+  .about-us .articles article {
+    width: 50%;
+  }
+}
+
+/* Extra Large */
+@media screen and (min-width: 1160px) {
+  .about-us .articles article {
+    width: 33%;
   }
 }
