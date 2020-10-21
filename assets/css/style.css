@@ -220,17 +220,20 @@ header nav li.active a {
 
 .uniform .container {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
 }
 
 .uniform article {
   text-align: justify;
-  margin-right: 30px;
+  margin: 0px 10px;
 }
 
 .uniform img {
-  width: 500px;
+  width: 400px;
   height: 100%;
+  margin: 0px 15px;
 }
 
 /* SECTIONS */
@@ -525,6 +528,14 @@ section embed {
 
   .about-us .articles article {
     width: 50%;
+  }
+
+  .uniform .container {
+    flex-direction: row;
+  }
+
+  .uniform img {
+    width: 500px;
   }
 }
 
