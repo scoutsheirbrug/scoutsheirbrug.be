@@ -536,6 +536,22 @@ section embed {
   }
 }
 
+/* Extra Small */
+@media screen and (max-width: 410px) {
+  .container {
+    width: 95%;
+  }
+
+  header {
+    font-size: 75%;
+  }
+
+  header nav li a {
+    margin: 3px;
+    padding: 9px;
+  }
+}
+
 /* Large */
 @media screen and (min-width: 980px) {
   .inschrijven iframe {
@@ -568,7 +584,7 @@ section embed {
   }
 
   .uniform img {
-    width: 500px;
+    width: 40%;
   }
 }
 
