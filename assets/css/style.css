@@ -466,9 +466,25 @@ section embed {
   height: 1780px;
 }
 
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.contact iframe {
+  max-width: 100%;
+}
+
 .contact em {
   font-weight: bold;
   font-style: normal;
+}
+
+.contact svg,
+.contact a {
+  color: #3F63AC;
+  fill: currentColor;
 }
 
 /* Small */
@@ -585,6 +601,15 @@ section embed {
 
   .uniform img {
     width: 40%;
+  }
+
+  .contact .container {
+    flex-direction: row;
+  }
+
+  .contact .container > * {
+    margin: 0 20px;
+    width: 50%;
   }
 }
 
