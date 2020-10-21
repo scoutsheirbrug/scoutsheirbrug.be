@@ -35,6 +35,31 @@
     </nav>
   </header>
   {{ content }}
+  {% if page.no_scroll != true %}
+  <footer>
+    <div class="container">
+      <div class="footer-info">
+        <img width="60" height="60" src="/assets/img/logo.svg" alt="">
+        <div>
+          <h2>Scouts Jan Berchmans</h2>
+          <p>Veerstraat 14, 9160 Lokeren</p>
+          <p><a href="mailto:leiding@scoutsheirbrug.be">leiding@scoutsheirbrug.be</a></p>
+        </div>
+      </div>
+      <ul class="footer-links">
+        <li>
+          <a href="/contact">Contact</a>
+        </li>
+        <li>
+          <a href="/privacy">Privacyverklaring</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-credits container">
+      <p>Ontwikkeld door Miro Stuyven en Timon Van Poucke</p>
+    </div>
+  </footer>
+  {% endif %}
 </body>
 
 </html>

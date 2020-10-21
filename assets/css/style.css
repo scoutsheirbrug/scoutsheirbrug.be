@@ -115,6 +115,39 @@ header nav li.active a {
   color: var(--accent-light);
 }
 
+/* FOOTER */
+
+footer {
+  padding: 20px 10px;
+  background-color: var(--accent-color);
+  box-shadow: inset 0 0 10px #000;
+  color: #fff;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-info {
+  display: flex;
+}
+
+footer a {
+  color: var(--accent-light);
+}
+
+footer .footer-info img {
+  margin-right: 10px;
+}
+
+footer .footer-credits {
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+  color: #909497;
+}
+
 /* SHOWCASE */
 
 .showcase {
