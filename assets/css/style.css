@@ -129,7 +129,6 @@ header nav li.active a {
   color: #ffffff;
 }
 
-
 .showcase img {
   width: 300px;
   margin: 0 0 20px 0;
@@ -161,7 +160,6 @@ header nav li.active a {
 /* ABOUT-US */
 
 .about-us {
-  min-height: 600px;
   padding: 50px 0px;
   background-color: #f4f4f4;
 }
@@ -203,6 +201,36 @@ header nav li.active a {
 .about-us .articles article h4 {
   font-size: 16px;
   padding: 5px 0;
+}
+
+/* INSCHRIJVEN */
+
+.inschrijven .container {
+  max-width: 900px;
+}
+
+/* UNIFORM */
+
+.uniform {
+  background-color: #b2d34d;
+  color: #4d230d;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+.uniform .container {
+  display: flex;
+  justify-content: center;
+}
+
+.uniform article {
+  text-align: justify;
+  margin-right: 30px;
+}
+
+.uniform img {
+  width: 500px;
+  height: 100%;
 }
 
 /* SECTIONS */
