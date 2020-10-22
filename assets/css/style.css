@@ -614,6 +614,11 @@ section embed {
   color: #fff;
 }
 
+.sjorring canvas {
+  /* width: 100%; */
+  /* height: calc(100vh - 65px); */
+}
+
 .inschrijven {
   display: flex;
   flex-direction: column;
