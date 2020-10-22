@@ -524,6 +524,90 @@ footer .footer-credits {
   margin-left: -80%;
 }
 
+/* CONTACT */
+
+.contact {
+  padding: 100px 0 35px 0;
+}
+
+.contact .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .box {
+  margin-bottom: 35px;
+  background-color: #d9dddc;
+  border: 2px solid var(--accent-color);
+  border-radius: 20px;
+}
+
+.contact .box h2 {
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.contact .box h3 {
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.contact .box p {
+  padding: 15px 25px;
+  text-align: justify;
+}
+
+.contact .box .line {
+  width: 80%;
+  height: 2px;
+  margin: auto;
+  background-color: #999da0;
+}
+
+.contact .box ul {
+  margin: 0;
+  margin-left: 5%;
+}
+
+.contact .maps {
+  width: 90%;
+  margin: auto;
+}
+
+.contact .box h6 {
+  margin: 12px;
+}
+
+.contact iframe {
+  width: 100%;
+}
+
+.contact em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.contact a {
+  color: #3f63ac;
+  fill: currentColor;
+}
+
+.contact .social {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact svg {
+  fill: var(--accent-color);
+  width: 50px;
+  margin: 20px;
+}
+
 /* SECTIONS */
 
 section {
@@ -543,7 +627,7 @@ section ul {
   padding-left: 25px;
 }
 
-section h2 {
+/* section h2 {
   margin-top: 25px;
   font-weight: normal;
 }
@@ -554,7 +638,7 @@ section h2::after {
   width: 100%;
   margin: 4px 0 14px 0;
   border-bottom: 2px dashed;
-}
+} */
 
 section img {
   max-width: 100%;
@@ -719,27 +803,6 @@ section embed {
 .inschrijven iframe {
   width: 100%;
   height: 1780px;
-}
-
-.contact .container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-}
-
-.contact iframe {
-  max-width: 100%;
-}
-
-.contact em {
-  font-weight: bold;
-  font-style: normal;
-}
-
-.contact svg,
-.contact a {
-  color: #3f63ac;
-  fill: currentColor;
 }
 
 /* Small */
