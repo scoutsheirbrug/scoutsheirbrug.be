@@ -750,6 +750,14 @@ body.pdf-enlarged .pdf-viewer button.pdf-enlarge {
     margin-left: 40px;
   }
 
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer ul {
+    padding: 20px;
+  }
+
   .showcase img {
     width: 250px;
   }
