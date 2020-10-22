@@ -29,3 +29,7 @@ async function updatePage() {
   canvas.width = viewport.width;
   await page.render({ canvasContext, viewport });
 }
+
+document.querySelector('.pdf-enlarge').addEventListener('click', () => {
+  document.body.classList.toggle('pdf-enlarged')
+})
