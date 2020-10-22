@@ -611,12 +611,31 @@ section embed {
 
 .sjorring {
   padding: 65px 0 0 0;
+  background-color: #263741;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sjorring button {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background: var(--accent-color);
   color: #fff;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.1em #000);
+  transition: 0.2s ease-in;
 }
 
 .sjorring canvas {
-  /* width: 100%; */
-  /* height: calc(100vh - 65px); */
+  max-height: calc(100vh - 65px);
+  max-width: 100vw;
 }
 
 .inschrijven {
@@ -713,6 +732,24 @@ section embed {
 
   .groepsadmin nav .step-link {
     width: 60px;
+  }
+
+  .sjorring {
+    position: relative;
+  }
+
+  .sjorring button {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .sjorring button:first-child {
+    left: 0;
+  }
+  
+  .sjorring button:last-child {
+    right: 0;
   }
 }
 

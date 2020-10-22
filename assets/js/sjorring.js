@@ -1,22 +1,31 @@
+let currentPage = 0
+let pages = [];
+
 const canvas = document.querySelector('canvas[data-pdf]');
 const loadingTask = pdfjsLib.getDocument(canvas.getAttribute('data-pdf'));
+
+/* Read document */
 (async () => {
   const pdf = await loadingTask.promise;
-  const page = await pdf.getPage(1);
+  pages = await Promise.all([...Array(pdf.numPages).keys()].map(i => pdf.getPage(i+1)));
+  updatePage()
+})();
 
-  const viewport = page.getViewport({scale: 1});
-  console.log(page, viewport)
+document.querySelectorAll('[data-page]').forEach(el => {
+  el.addEventListener('click', () => {
+    const targetPage = currentPage + parseInt(el.getAttribute('data-page'))
+    if (targetPage >= 0 && targetPage < pages.length) {
+      currentPage = targetPage;
+      updatePage()
+    }
+  })
+})
 
-  // Apply page dimensions to the <canvas> element.
-  const context = canvas.getContext("2d");
+async function updatePage() {
+  const page = pages[currentPage];
+  const viewport = page.getViewport({ scale: 2 });
+  const canvasContext = canvas.getContext("2d");
   canvas.height = viewport.height;
   canvas.width = viewport.width;
-
-  // Render the page into the <canvas> element.
-  const renderContext = {
-    canvasContext: context,
-    viewport: viewport
-  };
-  await page.render(renderContext);
-  console.log("Page rendered!");
-})();
+  await page.render({ canvasContext, viewport });
+}
