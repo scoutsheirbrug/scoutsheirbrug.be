@@ -276,40 +276,38 @@ footer .footer-credits {
 /* VERHUUR */
 
 .verhuur {
-  padding: 100px 0px;
+  padding: 100px 0 60px 0;
 }
 
 .verhuur .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .verhuur .info {
-  margin: 0px 20px;
-  border-radius: 20px;
-  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  border-radius: 6px;
   background-color: #d9dddc;
 }
 
 .verhuur .info h3 {
   font-size: 24px;
-  margin: 5px;
-  text-align: center;
 }
 
 .verhuur .info p {
-  margin: 0px 15px;
   text-align: justify;
 }
 
 .verhuur .pictures {
-  display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  width: 100%;
 }
 
 .verhuur .control {
   display: flex;
+  justify-content: center;
 }
 
 .verhuur .control label {
@@ -319,7 +317,7 @@ footer .footer-credits {
   color: #fff;
   width: 100px;
   height: 30px;
-  margin: 10px;
+  margin: 6px;
   padding: 3px 5px;
   cursor: pointer;
   transition: 0.3s;
@@ -331,11 +329,12 @@ footer .footer-credits {
 }
 
 .verhuur .slidershow {
-  position: relative;
-  width: 700px;
-  height: 400px;
-  border-radius: 20px;
+  height: 0;
   overflow: hidden;
+  padding-top: 56.25%;
+  background: yellow;
+  position: relative;
+  border-radius: 6px;
 }
 
 .verhuur .subnav {
@@ -367,7 +366,11 @@ footer .footer-credits {
 }
 
 .verhuur .slides {
+  background-color: red;
   display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
   height: 100%;
   width: 1000%;
 }
@@ -766,6 +769,19 @@ section embed {
   .contact .container > * {
     margin: 0 20px;
     width: 50%;
+  }
+
+  .verhuur .container {
+    flex-direction: row;
+  }
+
+  .verhuur .info {
+    width: 40%;
+    margin: 0 20px 0 0;
+  }
+
+  .verhuur .pictures {
+    width: 60%;
   }
 }
 
