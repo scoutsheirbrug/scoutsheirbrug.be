@@ -308,11 +308,11 @@ footer .footer-credits {
   align-items: center;
 }
 
-.verhuur nav.control {
+.verhuur .control {
   display: flex;
 }
 
-.verhuur label.control {
+.verhuur .control label {
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -321,10 +321,12 @@ footer .footer-credits {
   height: 30px;
   margin: 10px;
   padding: 3px 5px;
+  cursor: pointer;
+  transition: 0.3s;
   background-color: var(--accent-color);
 }
 
-.verhuur label.control:hover {
+.verhuur .control label:hover {
   background: var(--accent-light);
 }
 
@@ -337,24 +339,25 @@ footer .footer-credits {
 }
 
 .verhuur .subnav {
+  display: none;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
 }
 
-.verhuur label {
+.verhuur .subnav label {
   width: 50px;
   height: 10px;
+  margin: 6px;
   border: 2px solid #fff;
   border-radius: 5px;
-  margin: 6px;
+  filter: drop-shadow(0 0 0.3em #000);
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
-.verhuur label:hover {
+.verhuur .subnav label:hover {
   background: #fff;
 }
 
@@ -364,164 +367,62 @@ footer .footer-credits {
 }
 
 .verhuur .slides {
-  display: flex;
+  display: none;
   height: 100%;
+  width: 1000%;
 }
 
-.verhuur .slides .slide {
+.verhuur .slide {
   transition: 0.6s;
-  background-color: #000;
+  background-color: #000000;
   text-align: center;
-}
-
-.verhuur .slides.buiten {
-  width: 300%;
-}
-
-.verhuur .slides.buiten .slide {
-  width: 33.33%;
-}
-
-.verhuur .slides.beneden,
-.verhuur .slides.sanitair {
-  width: 500%;
-}
-
-.verhuur .slides.beneden .slide,
-.verhuur .slides.sanitair .slide {
-  width: 20%;
-}
-
-.verhuur .slides.boven {
-  width: 400%;
-}
-
-.verhuur .slides.boven .slide {
-  width: 25%;
+  width: 10%;
 }
 
 .verhuur .slide img {
   height: 100%;
 }
 
-.verhuur .subnav {
+#control1:checked ~ .buiten,
+#control2:checked ~ .beneden,
+#control3:checked ~ .boven,
+#control4:checked ~ .sanitair {
   display: flex;
 }
 
-#control1:checked ~ .beneden {
-  display: none;
-}
-
-#control1:checked ~ .boven {
-  display: none;
-}
-
-#control1:checked ~ .sanitair {
-  display: none;
-}
-
-#control2:checked ~ .buiten {
-  display: none;
-}
-
-#control2:checked ~ .boven {
-  display: none;
-}
-
-#control2:checked ~ .sanitair {
-  display: none;
-}
-
-#control3:checked ~ .buiten {
-  display: none;
-}
-
-#control3:checked ~ .beneden {
-  display: none;
-}
-
-#control3:checked ~ .sanitair {
-  display: none;
-}
-
-#control4:checked ~ .buiten {
-  display: none;
-}
-
-#control4:checked ~ .beneden {
-  display: none;
-}
-
-#control4:checked ~ .boven {
-  display: none;
-}
-
-#buiten1:checked ~ .s1 {
+#buiten1:checked ~ .first-slide,
+#beneden1:checked ~ .first-slide,
+#boven1:checked ~ .first-slide,
+#sanitair1:checked ~ .first-slide {
   margin-left: 0;
 }
 
-#buiten2:checked ~ .s1 {
-  margin-left: -33.33%;
+#buiten2:checked ~ .first-slide,
+#beneden2:checked ~ .first-slide,
+#boven2:checked ~ .first-slide,
+#sanitair2:checked ~ .first-slide {
+  margin-left: -10%;
 }
 
-#buiten3:checked ~ .s1 {
-  margin-left: -66.66%;
-}
-
-#beneden1:checked ~ .s2 {
-  margin-left: 0;
-}
-
-#beneden2:checked ~ .s2 {
+#buiten3:checked ~ .first-slide,
+#beneden3:checked ~ .first-slide,
+#boven3:checked ~ .first-slide,
+#sanitair3:checked ~ .first-slide {
   margin-left: -20%;
 }
 
-#beneden3:checked ~ .s2 {
+#buiten4:checked ~ .first-slide,
+#beneden4:checked ~ .first-slide,
+#boven4:checked ~ .first-slide,
+#sanitair4:checked ~ .first-slide {
+  margin-left: -30%;
+}
+
+#buiten5:checked ~ .first-slide,
+#beneden5:checked ~ .first-slide,
+#boven5:checked ~ .first-slide,
+#sanitair5:checked ~ .first-slide {
   margin-left: -40%;
-}
-
-#beneden4:checked ~ .s2 {
-  margin-left: -60%;
-}
-
-#beneden5:checked ~ .s2 {
-  margin-left: -80%;
-}
-
-#boven1:checked ~ .s3 {
-  margin-left: 0;
-}
-
-#boven2:checked ~ .s3 {
-  margin-left: -25%;
-}
-
-#boven3:checked ~ .s3 {
-  margin-left: -50%;
-}
-
-#boven4:checked ~ .s3 {
-  margin-left: -75%;
-}
-
-#sanitair1:checked ~ .s4 {
-  margin-left: 0;
-}
-
-#sanitair2:checked ~ .s4 {
-  margin-left: -20%;
-}
-
-#sanitair3:checked ~ .s4 {
-  margin-left: -40%;
-}
-
-#sanitair4:checked ~ .s4 {
-  margin-left: -60%;
-}
-
-#sanitair5:checked ~ .s4 {
-  margin-left: -80%;
 }
 
 /* SECTIONS */
