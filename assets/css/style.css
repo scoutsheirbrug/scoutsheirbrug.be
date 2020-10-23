@@ -276,85 +276,87 @@ footer .footer-credits {
 /* VERHUUR */
 
 .verhuur {
-  padding: 100px 0px;
+  padding: 100px 0 60px 0;
 }
 
 .verhuur .container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .verhuur .info {
-  margin: 0px 20px;
-  border-radius: 20px;
-  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 15px;
+  border-radius: 6px;
   background-color: #d9dddc;
 }
 
 .verhuur .info h3 {
   font-size: 24px;
-  margin: 5px;
-  text-align: center;
 }
 
 .verhuur .info p {
-  margin: 0px 15px;
   text-align: justify;
 }
 
 .verhuur .pictures {
-  display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  width: 100%;
 }
 
-.verhuur nav.control {
+.verhuur .control {
   display: flex;
+  justify-content: center;
 }
 
-.verhuur label.control {
+.verhuur .control label {
   text-align: center;
   border: none;
   border-radius: 50px;
   color: #fff;
   width: 100px;
   height: 30px;
-  margin: 10px;
+  margin: 6px;
   padding: 3px 5px;
+  cursor: pointer;
+  transition: 0.3s;
   background-color: var(--accent-color);
 }
 
-.verhuur label.control:hover {
+.verhuur .control label:hover {
   background: var(--accent-light);
 }
 
 .verhuur .slidershow {
-  position: relative;
-  width: 700px;
-  height: 400px;
-  border-radius: 20px;
+  height: 0;
   overflow: hidden;
+  padding-top: 56.25%;
+  background: yellow;
+  position: relative;
+  border-radius: 6px;
 }
 
 .verhuur .subnav {
+  display: none;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
 }
 
-.verhuur label {
+.verhuur .subnav label {
   width: 50px;
   height: 10px;
+  margin: 6px;
   border: 2px solid #fff;
   border-radius: 5px;
-  margin: 6px;
+  filter: drop-shadow(0 0 0.3em #000);
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
-.verhuur label:hover {
+.verhuur .subnav label:hover {
   background: #fff;
 }
 
@@ -364,164 +366,66 @@ footer .footer-credits {
 }
 
 .verhuur .slides {
-  display: flex;
+  background-color: red;
+  display: none;
+  top: 0;
+  left: 0;
+  position: absolute;
   height: 100%;
+  width: 1000%;
 }
 
-.verhuur .slides .slide {
+.verhuur .slide {
   transition: 0.6s;
-  background-color: #000;
+  background-color: #000000;
   text-align: center;
-}
-
-.verhuur .slides.buiten {
-  width: 300%;
-}
-
-.verhuur .slides.buiten .slide {
-  width: 33.33%;
-}
-
-.verhuur .slides.beneden,
-.verhuur .slides.sanitair {
-  width: 500%;
-}
-
-.verhuur .slides.beneden .slide,
-.verhuur .slides.sanitair .slide {
-  width: 20%;
-}
-
-.verhuur .slides.boven {
-  width: 400%;
-}
-
-.verhuur .slides.boven .slide {
-  width: 25%;
+  width: 10%;
 }
 
 .verhuur .slide img {
   height: 100%;
 }
 
-.verhuur .subnav {
+#control1:checked ~ .buiten,
+#control2:checked ~ .beneden,
+#control3:checked ~ .boven,
+#control4:checked ~ .sanitair {
   display: flex;
 }
 
-#control1:checked ~ .beneden {
-  display: none;
-}
-
-#control1:checked ~ .boven {
-  display: none;
-}
-
-#control1:checked ~ .sanitair {
-  display: none;
-}
-
-#control2:checked ~ .buiten {
-  display: none;
-}
-
-#control2:checked ~ .boven {
-  display: none;
-}
-
-#control2:checked ~ .sanitair {
-  display: none;
-}
-
-#control3:checked ~ .buiten {
-  display: none;
-}
-
-#control3:checked ~ .beneden {
-  display: none;
-}
-
-#control3:checked ~ .sanitair {
-  display: none;
-}
-
-#control4:checked ~ .buiten {
-  display: none;
-}
-
-#control4:checked ~ .beneden {
-  display: none;
-}
-
-#control4:checked ~ .boven {
-  display: none;
-}
-
-#buiten1:checked ~ .s1 {
+#buiten1:checked ~ .first-slide,
+#beneden1:checked ~ .first-slide,
+#boven1:checked ~ .first-slide,
+#sanitair1:checked ~ .first-slide {
   margin-left: 0;
 }
 
-#buiten2:checked ~ .s1 {
-  margin-left: -33.33%;
+#buiten2:checked ~ .first-slide,
+#beneden2:checked ~ .first-slide,
+#boven2:checked ~ .first-slide,
+#sanitair2:checked ~ .first-slide {
+  margin-left: -10%;
 }
 
-#buiten3:checked ~ .s1 {
-  margin-left: -66.66%;
-}
-
-#beneden1:checked ~ .s2 {
-  margin-left: 0;
-}
-
-#beneden2:checked ~ .s2 {
+#buiten3:checked ~ .first-slide,
+#beneden3:checked ~ .first-slide,
+#boven3:checked ~ .first-slide,
+#sanitair3:checked ~ .first-slide {
   margin-left: -20%;
 }
 
-#beneden3:checked ~ .s2 {
+#buiten4:checked ~ .first-slide,
+#beneden4:checked ~ .first-slide,
+#boven4:checked ~ .first-slide,
+#sanitair4:checked ~ .first-slide {
+  margin-left: -30%;
+}
+
+#buiten5:checked ~ .first-slide,
+#beneden5:checked ~ .first-slide,
+#boven5:checked ~ .first-slide,
+#sanitair5:checked ~ .first-slide {
   margin-left: -40%;
-}
-
-#beneden4:checked ~ .s2 {
-  margin-left: -60%;
-}
-
-#beneden5:checked ~ .s2 {
-  margin-left: -80%;
-}
-
-#boven1:checked ~ .s3 {
-  margin-left: 0;
-}
-
-#boven2:checked ~ .s3 {
-  margin-left: -25%;
-}
-
-#boven3:checked ~ .s3 {
-  margin-left: -50%;
-}
-
-#boven4:checked ~ .s3 {
-  margin-left: -75%;
-}
-
-#sanitair1:checked ~ .s4 {
-  margin-left: 0;
-}
-
-#sanitair2:checked ~ .s4 {
-  margin-left: -20%;
-}
-
-#sanitair3:checked ~ .s4 {
-  margin-left: -40%;
-}
-
-#sanitair4:checked ~ .s4 {
-  margin-left: -60%;
-}
-
-#sanitair5:checked ~ .s4 {
-  margin-left: -80%;
 }
 
 /* CONTACT */
@@ -791,7 +695,88 @@ section embed {
 
 .sjorring {
   padding: 65px 0 0 0;
+  background-color: #263741;
+  display: flex;
+  justify-content: center;
+}
+
+.pdf-viewer {
+  position: relative;
+}
+
+.pdf-viewer button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  background: var(--accent-color);
   color: #fff;
+  fill: currentColor;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.1em #000);
+}
+
+.pdf-viewer button[data-page] {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.pdf-viewer button[data-page="-1"] {
+  left: -60px;
+}
+
+.pdf-viewer button[data-page="1"] {
+  right: -60px;
+}
+
+.pdf-viewer button.pdf-enlarge {
+  bottom: 10px;
+  right: -60px;
+}
+
+body.pdf-enlarged .pdf-viewer button.pdf-enlarge svg:first-child,
+body:not(.pdf-enlarged) .pdf-viewer button.pdf-enlarge svg:last-child {
+  display: none;
+}
+
+.pdf-viewer canvas {
+  display: block;
+  max-height: calc(100vh - 65px);
+  max-width: 100vw;
+}
+
+body.pdf-enlarged .pdf-viewer {
+  position: unset;
+}
+
+body.pdf-enlarged canvas {
+  max-height: unset;
+  width: 960px;
+}
+
+body.pdf-enlarged .pdf-viewer button[data-page] {
+  bottom: 10px;
+  position: fixed;
+  transform: none;
+}
+
+body.pdf-enlarged .pdf-viewer button[data-page="-1"] {
+  left: 10px;
+}
+
+body.pdf-enlarged .pdf-viewer button[data-page="1"] {
+  right: 10px;
+}
+
+body.pdf-enlarged .pdf-viewer button.pdf-enlarge {
+  bottom: 10px;
+  position: fixed;
+  right: 70px;
 }
 
 .inschrijven {
@@ -826,6 +811,14 @@ section embed {
 
   header.scrolled nav ul {
     margin-left: 40px;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer ul {
+    padding: 20px;
   }
 
   .showcase img {
@@ -867,6 +860,24 @@ section embed {
 
   .groepsadmin nav .step-link {
     width: 60px;
+  }
+
+  .pdf-viewer button[data-page] {
+    bottom: 10px;
+    transform: none;
+  }
+
+  .pdf-viewer button[data-page="-1"] {
+    left: 10px;
+  }
+
+  .pdf-viewer button[data-page="1"] {
+    right: 10px;
+  }
+
+  .pdf-viewer button.pdf-enlarge {
+    bottom: 10px;
+    right: 70px;
   }
 }
 
@@ -928,6 +939,19 @@ section embed {
   .contact .container > * {
     margin: 0 20px;
     width: 50%;
+  }
+
+  .verhuur .container {
+    flex-direction: row;
+  }
+
+  .verhuur .info {
+    width: 40%;
+    margin: 0 20px 0 0;
+  }
+
+  .verhuur .pictures {
+    width: 60%;
   }
 }
 
