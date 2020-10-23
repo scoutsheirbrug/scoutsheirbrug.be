@@ -512,6 +512,55 @@ footer .footer-credits {
   margin: 20px;
 }
 
+/* GESCHIEDENIS */
+
+.geschiedenis {
+  padding: 45px 0;
+}
+
+.geschiedenis h2 {
+  font-family: "Chomsky";
+  padding: 5px;
+  text-align: center;
+  font-size: 72px;
+}
+
+.geschiedenis .line {
+  width: 100%;
+  background-color: var(--accent-color);
+  height: 10px;
+  margin: 10px 0;
+}
+
+.geschiedenis article {
+  columns: 4 200px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.geschiedenis p {
+  font-size: 14px;
+  text-align: justify;
+  padding: 4px 8px;
+}
+
+.geschiedenis p.inleiding {
+  padding: 6px 8px;
+  font-style: italic;
+  font-weight: bold;
+  color: #333333;
+}
+
+.geschiedenis img {
+  padding: 4px 8px 0 8px;
+}
+
+.geschiedenis h6 {
+  padding: 0 8px 4px 8px;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+}
+
 /* SECTIONS */
 
 section {
@@ -994,4 +1043,9 @@ body.pdf-enlarged footer {
   .about-us .articles article {
     width: 33%;
   }
+}
+
+@font-face {
+  font-family: "Chomsky";
+  src: url(/assets/fonts/Chomsky.woff);
 }
