@@ -120,7 +120,6 @@ header nav li.active a {
 footer {
   padding: 20px 10px;
   background-color: var(--accent-color);
-  box-shadow: inset 0 0 10px #000;
   color: #fff;
 }
 
@@ -245,8 +244,8 @@ footer .footer-credits {
 /* UNIFORM */
 
 .uniform {
-  background-color: #b2d34d;
-  color: #4d230d;
+  /* background-color: #b2d34d;
+  color: #4d230d; */
   padding-top: 40px;
   padding-bottom: 25px;
 }
@@ -270,7 +269,8 @@ footer .footer-credits {
 .uniform img {
   width: 400px;
   height: 100%;
-  margin: 0px 15px;
+  margin: 15px;
+  border-radius: 20px;
 }
 
 /* VERHUUR */
@@ -538,7 +538,7 @@ footer .footer-credits {
 }
 
 .geschiedenis p {
-  font-size: 14px;
+  font-size: 12px;
   text-align: justify;
   padding: 4px 8px;
 }
@@ -556,9 +556,16 @@ footer .footer-credits {
 
 .geschiedenis h6 {
   padding: 0 8px 4px 8px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: normal;
   font-style: italic;
+}
+
+/* TAKKEN */
+
+.takken {
+  height: 550px;
+  background-color: #d9dddc;
 }
 
 /* SECTIONS */
@@ -604,11 +611,6 @@ section embed {
 
 .slideshow {
   height: 400px;
-}
-
-.takken {
-  height: 550px;
-  background-color: #060d11;
 }
 
 /* GROEPSADMIN */
@@ -977,6 +979,10 @@ body.pdf-enlarged footer {
   header nav li a {
     margin: 3px;
     padding: 9px;
+  }
+
+  .geschiedenis h2 {
+    font-size: 56px;
   }
 }
 
