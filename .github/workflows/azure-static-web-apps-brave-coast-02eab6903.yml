@@ -31,7 +31,7 @@ jobs:
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
       - name: Jekyll build
-        run: jekyll build
+        run: bundle exec jekyll build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
