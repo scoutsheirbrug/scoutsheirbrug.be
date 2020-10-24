@@ -29,7 +29,7 @@ function updateGroepsadminNav() {
     nav.forEach(e => e.classList.remove('active'));
     nav[step].classList.add('active');
     // Update slideshow
-    groepsadmin.querySelector('.step').style.marginLeft = `-${step*20}%`;
+    groepsadmin.querySelector('.steps').style.setProperty('--i', step)
   }
 }
 
@@ -37,14 +37,4 @@ window.onpopstate = () => {
   updateGroepsadminNav();
 };
 
-docReady(() => {
-  updateGroepsadminNav(true);
-});
-
-function docReady(fn) {
-  if (document.readyState === "complete" || document.readyState === "interactive") {
-    setTimeout(fn, 1);
-  } else {
-    document.addEventListener("DOMContentLoaded", fn);
-  }
-}
+updateGroepsadminNav();

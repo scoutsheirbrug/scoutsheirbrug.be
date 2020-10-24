@@ -15,73 +15,35 @@ permalink: /verhuur/
         <input type="radio" name="control" id="control2">
         <input type="radio" name="control" id="control3">
         <input type="radio" name="control" id="control4">
-        <div class="slides buiten">
-          <input type="radio" name="buiten" id="buiten1" checked>
-          <input type="radio" name="buiten" id="buiten2">
-          <input type="radio" name="buiten" id="buiten3">
-          <div class="slide first-slide"><img src="/assets/img/verhuur/buitenaanzicht1.jpg" alt=""></div>
+        <div class="slides buiten swiper" style="--n: 3;" swiper-for=".subnav.buiten">
+          <div class="slide"><img src="/assets/img/verhuur/buitenaanzicht1.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/buitenaanzicht2.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/speelplein1.jpg" alt=""></div>
         </div>
-        <div class="slides beneden">
-          <input type="radio" name="beneden" id="beneden1" checked>
-          <input type="radio" name="beneden" id="beneden2">
-          <input type="radio" name="beneden" id="beneden3">
-          <input type="radio" name="beneden" id="beneden4">
-          <input type="radio" name="beneden" id="beneden5">
-          <div class="slide first-slide"><img src="/assets/img/verhuur/gelijkvloers1.jpg" alt=""></div>
+        <nav class="subnav buiten" id="controls-buiten"></nav>
+        <div class="slides beneden swiper" style="--n: 5;" swiper-for=".subnav.beneden">
+          <div class="slide"><img src="/assets/img/verhuur/gelijkvloers1.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/gelijkvloers2.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/gelijkvloers3.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/gelijkvloers4.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/gelijkvloers5.jpg" alt=""></div>
         </div>
-        <div class="slides boven">
-          <input type="radio" name="boven" id="boven1" checked>
-          <input type="radio" name="boven" id="boven2">
-          <input type="radio" name="boven" id="boven3">
-          <input type="radio" name="boven" id="boven4">
-          <div class="slide first-slide"><img src="/assets/img/verhuur/bovenverdieping1.jpg" alt=""></div>
+        <nav class="subnav beneden" id="controls-beneden"></nav>
+        <div class="slides boven swiper" style="--n: 4;" swiper-for=".subnav.boven">
+          <div class="slide"><img src="/assets/img/verhuur/bovenverdieping1.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/bovenverdieping2.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/bovenverdieping3.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/bovenverdieping4.jpg" alt=""></div>
         </div>
-        <div class="slides sanitair">
-          <input type="radio" name="sanitair" id="sanitair1" checked>
-          <input type="radio" name="sanitair" id="sanitair2">
-          <input type="radio" name="sanitair" id="sanitair3">
-          <input type="radio" name="sanitair" id="sanitair4">
-          <input type="radio" name="sanitair" id="sanitair5">
-          <div class="slide first-slide"><img src="/assets/img/verhuur/sanitair1.jpg" alt=""></div>
+        <nav class="subnav boven" id="controls-boven"></nav>
+        <div class="slides sanitair swiper" style="--n: 5;" swiper-for=".subnav.sanitair">
+          <div class="slide"><img src="/assets/img/verhuur/sanitair1.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/sanitair2.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/sanitair3.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/sanitair4.jpg" alt=""></div>
           <div class="slide"><img src="/assets/img/verhuur/sanitair5.jpg" alt=""></div>
         </div>
-        <nav class="subnav buiten">
-          <label for="buiten1"></label>
-          <label for="buiten2"></label>
-          <label for="buiten3"></label>
-        </nav>
-        <nav class="subnav beneden">
-          <label for="beneden1"></label>
-          <label for="beneden2"></label>
-          <label for="beneden3"></label>
-          <label for="beneden4"></label>
-          <label for="beneden5"></label>
-        </nav>
-        <nav class="subnav boven">
-          <label for="boven1"></label>
-          <label for="boven2"></label>
-          <label for="boven3"></label>
-          <label for="boven4"></label>
-        </nav>
-        <nav class="subnav sanitair">
-          <label for="sanitair1"></label>
-          <label for="sanitair2"></label>
-          <label for="sanitair3"></label>
-          <label for="sanitair4"></label>
-          <label for="sanitair5"></label>
-        </nav>
+        <nav class="subnav sanitair" id="controls-sanitair"></nav>
       </div>
       <nav class="control">
         <label for="control1">Buiten</label>
@@ -92,3 +54,4 @@ permalink: /verhuur/
     </div>
   </div>
 </section>
+<script src="/assets/js/swiper.js"></script>
