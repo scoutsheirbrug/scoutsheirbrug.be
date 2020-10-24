@@ -284,19 +284,36 @@ footer .footer-credits {
   flex-direction: column;
 }
 
-.verhuur .info {
-  margin: 0 0 20px 0;
-  padding: 15px;
-  border-radius: 6px;
-  background-color: #d9dddc;
+.verhuur a {
+  color: #3f63ac;
+  fill: currentColor;
 }
 
-.verhuur .info h3 {
-  font-size: 24px;
+.verhuur a.button {
+  margin: auto;
+  display: block;
+  padding: 5px;
+  border-radius: 50px;
+  transition: 0.4s;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  background-color: var(--accent-color);
 }
 
-.verhuur .info p {
-  text-align: justify;
+.verhuur a.button:hover {
+  background-color: var(--accent-light);
+}
+
+.verhuur span {
+  font-weight: bold;
+}
+
+.verhuur iframe {
+  display: block;
+  width: 95%;
+  margin: auto;
+  height: 350px;
 }
 
 .verhuur .pictures {
@@ -329,11 +346,9 @@ footer .footer-credits {
 }
 
 .verhuur .slidershow {
-  height: 0;
-  overflow: hidden;
   padding-top: 56.25%;
+  overflow: hidden;
   position: relative;
-  border-radius: 6px;
 }
 
 .verhuur .subnav {
@@ -405,52 +420,9 @@ footer .footer-credits {
   flex-direction: column;
 }
 
-.contact .box {
-  margin-bottom: 35px;
-  background-color: #d9dddc;
-  border: 2px solid var(--accent-color);
-  border-radius: 20px;
-}
-
-.contact .box h2 {
-  border-radius: 15px 15px 0 0;
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  padding: 5px;
-  color: #fff;
-  background-color: var(--accent-color);
-}
-
-.contact .box h3 {
-  text-align: center;
-  padding: 15px 0 0 0;
-}
-
-.contact .box p {
-  padding: 15px 25px;
-  text-align: justify;
-}
-
-.contact .box .line {
-  width: 80%;
-  height: 2px;
-  margin: auto;
-  background-color: #999da0;
-}
-
-.contact .box ul {
-  margin: 0;
-  margin-left: 5%;
-}
-
 .contact .maps {
   width: 90%;
   margin: auto;
-}
-
-.contact .box h6 {
-  margin: 12px;
 }
 
 .contact iframe {
@@ -527,6 +499,51 @@ footer .footer-credits {
   font-style: italic;
 }
 
+/* BOX */
+
+.box {
+  margin-bottom: 35px;
+  background-color: #d9dddc;
+  border: 2px solid var(--accent-color);
+  border-radius: 20px;
+}
+
+.box h2 {
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  color: #fff;
+  background-color: var(--accent-color);
+}
+
+.box h3 {
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.box p {
+  padding: 15px 25px;
+  text-align: justify;
+}
+
+.box .line {
+  width: 80%;
+  height: 2px;
+  margin: auto;
+  background-color: #999da0;
+}
+
+.box ul {
+  margin: 0;
+  margin-left: 5%;
+}
+
+.box h6 {
+  margin: 12px;
+}
+
 /* TAKKEN */
 
 .takken {
@@ -584,12 +601,12 @@ section embed {
   --i: 0;
   display: flex;
   width: calc(var(--n) * 100%);
-  transform: translate(calc(var(--i, 0)/var(--n)*-100%));
+  transform: translate(calc(var(--i, 0) / var(--n) * -100%));
   transition: transform 0.5s ease-out;
 }
 
 .swiper > * {
-  width: calc(100%/var(--n));
+  width: calc(100% / var(--n));
 }
 
 .swiper img {
@@ -1000,26 +1017,15 @@ body.pdf-enlarged footer {
     width: 40%;
   }
 
-  .contact .container {
-    flex-direction: row;
-  }
-
-  .contact .container > * {
-    margin: 0 20px;
-    width: 50%;
-  }
-
+  .contact .container,
   .verhuur .container {
     flex-direction: row;
   }
 
-  .verhuur .info {
-    width: 40%;
-    margin: 0 20px 0 0;
-  }
-
-  .verhuur .pictures {
-    width: 60%;
+  .contact .container > *,
+  .verhuur .container > * {
+    margin: 0 20px;
+    width: 50%;
   }
 }
 
