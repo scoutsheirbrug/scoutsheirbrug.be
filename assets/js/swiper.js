@@ -33,9 +33,11 @@ document.querySelectorAll('.swiper').forEach(swiper => {
   };
   function move(e) {
     if(x0 !== null) {
-      const dir = Math.sign(unify(e).clientX - x0);
+      const dx = unify(e).clientX - x0;
+      const dir = Math.sign(dx);
+      const f = +(dir * dx / window.innerWidth).toFixed(2);
       const target = swiper.style.getPropertyValue('--i') - dir;
-      if(target >= 0 && target < swiper.style.getPropertyValue('--n')) {
+      if(target >= 0 && target < swiper.style.getPropertyValue('--n') && f > 0.2) {
         swiper.style.setProperty('--i', target);
 
         if (swiperFor) {
