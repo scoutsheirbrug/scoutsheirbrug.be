@@ -244,8 +244,6 @@ footer .footer-credits {
 /* UNIFORM */
 
 .uniform {
-  /* background-color: #b2d34d;
-  color: #4d230d; */
   padding-top: 40px;
   padding-bottom: 25px;
 }
@@ -547,8 +545,66 @@ footer .footer-credits {
 /* TAKKEN */
 
 .takken {
-  height: 550px;
-  background-color: #d9dddc;
+  padding: 20px 0;
+  background-color: #263741;
+  color: #fff;
+}
+
+.takken .container {
+  overflow-x: hidden;
+}
+
+.takken h2 {
+  padding: 20px;
+}
+
+.takken nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.takken nav label {
+  padding: 0 15px;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  margin: 4px 4px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.3em #000);
+  transition: 0.4s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.takken nav label.active,
+.takken nav label:hover {
+  background: #fff;
+  color: #000;
+}
+
+.takken .swiper {
+  height: 100%;
+}
+
+.takken .tak {
+  display: flex;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.takken .tak img {
+  width: 30%;
+  float: right;
+  margin-left: 10px;
 }
 
 /* SECTIONS */
@@ -569,19 +625,6 @@ section p {
 section ul {
   padding-left: 25px;
 }
-
-/* section h2 {
-  margin-top: 25px;
-  font-weight: normal;
-}
-
-section h2::after {
-  content: "";
-  display: block;
-  width: 100%;
-  margin: 4px 0 14px 0;
-  border-bottom: 2px dashed;
-} */
 
 section img {
   max-width: 100%;
@@ -914,7 +957,7 @@ body.pdf-enlarged footer {
   }
 
   .groepsadmin .step {
-    display: unset;
+    flex-direction: column;
   }
 
   .groepsadmin .step .step-content {
@@ -936,6 +979,10 @@ body.pdf-enlarged footer {
 
   .groepsadmin nav .step-link {
     width: 60px;
+  }
+
+  .takken .tak {
+    flex-direction: column;
   }
 
   .pdf-viewer button[data-page] {
