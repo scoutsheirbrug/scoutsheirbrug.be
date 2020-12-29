@@ -164,6 +164,7 @@ footer .footer-credits {
 
 .showcase img {
   width: 300px;
+  height: auto;
   margin: 0 0 20px 0;
   filter: drop-shadow(0 0 1rem #000);
 }
@@ -944,6 +945,7 @@ body.pdf-enlarged footer {
 
   .showcase img {
     width: 250px;
+    height: auto;
   }
 
   .showcase .actions {
