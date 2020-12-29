@@ -18,152 +18,40 @@ transparent_header: true
       <h3>Scouting is leren...</h3>
     </div>
     <div class="articles">
-      <article>
-        <h4>Samenwerken</h4>
-        <p>Bij de scouts leef je in groep. Je leert constructief samenwerken en smeedt hierbij vriendschappen voor het leven. Je leert dat
-          samenwerken niet altijd evident is en het belang van respectvolle communicatie om alles goed te doen verlopen. Alleen ga je sneller, samen kom je verder!</p>
-      </article> 
-      <article>
-        <h4>Relativeren</h4>
-        <p>
-          Even weg uit de dagelijkse sleur. Door afstand te nemen van de afleidingen en toeters & bellen van het dagelijkse leven,
-          leer je wat écht belangrijk is en wat eigenlijk maar bijkomstig.
-        </p>
-      </article>
-      <article>
-        <h4>Zorg dragen</h4>
-        <p>Zorg dragen voor jezelf, elkaar en de natuur. Leren op een aangename en eerlijke manier omgaan met elkaar en de omgeving. Je bouwt mee aan een groep die
-          elkaar steunt en helpt waar nodig.</p>
-      </article>
-      <article>
-        <h4>Genieten</h4>
-        <p>
-          Wandelen in de natuur, lekker luieren in je hangmat, op een frisse avond rond het kampvuur kruipen, smullen van zelfgemaakt eten,...
-          Scouting is leren genieten van de kleine dingen des levens.
-        </p>
-      </article>
-      <article>
-        <h4>Doorbijten</h4>
-        <p>Lange staptochten, een groot kampvuur helpen bouwen, verantwoordelijkheid nemen over kleine of iets grotere taken. Bij de scouts leer je om niet op te geven
-          en zie je wat je kunt bereiken met deze mentaliteit.</p>
-      </article>
-      <article>   
-        <h4>Je plan trekken</h4>
-        <p>
-          Hout hakken, vuur maken, koken, tenten opzetten, sjorren, kaart lezen,... Door veel te doen sta je sterker in je schoenen en
-          leer je zaken efficiënt en pragmatisch aanpakken.
-        </p>
-      </article>
+      {% assign articles = "samenwerken,relativeren,zorg_dragen,genieten,doorbijten,je_plan_trekken" | split: "," %}
+      {% for article in articles %}
+        <article>
+          {% capture c %}{% include content/about/{{article}}.md %}{% endcapture %}{{ c | markdownify }}
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>
 <section class="takken">
   <div class="container">
+    {% assign takken = "kapoenen,welpen,jongverkenners,verkenners,jin,leiding,akabe" | split: "," %}
     <h2>Takken</h2>
     <nav>
-      <label>Kapoenen</label>
-      <label>Welpen</label>
-      <label>Jongverkenners</label>
-      <label>Verkenners</label>
-      <label>Jin</label>
-      <label>Leiding</label>
-      <label>Akabe</label>
+      {% for tak in takken %}
+        <label>{{ tak | capitalize }}</label>
+      {% endfor %}
     </nav>
     <div class="swiper" style="--n: 7;" swiper-for=".takken nav">
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Kapoenen</h3>
-          <p>Het leven van een kapoen is er één vol spel, fantasie, creativiteit en expressie. Spelenderwijs en ongedwongen ontdekken we samen met hen de wereld. De leiding gaat hierbij uit van de kapoen zelf, van wat hen boeit en aanspreekt.</p>
-          <p>Het hoogtepunt in een kapoenenleven? Voor de eerste keer op kamp!</p>
-          <p><b>Leeftijd</b>: 6 tot 8 jaar</p>
-          <p><b>Leiding</b>: Meerten, Gertjan, Pepijn en Jordy</p>
+      {% for tak in takken %}
+        <div class="tak">
+          <div class="tak-content">
+            {% capture c %}{% include content/takken/{{tak}}.md %}{% endcapture %}{{ c | markdownify }}
+          </div>
+          <img src="/assets/img/takken/{{tak}}.png" alt="">
         </div>
-        <img src="/assets/img/takken/kapoenen.png" alt="">
-      </div>
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Welpen</h3>
-          <p>Is het leven een jungle of een speeltuin? Welpen leren zélf spannende dingen doen. Hun eigen lokaal inrichten, muziekinstrumenten maken, in bomen klimmen, kampen bouwen onder de blote hemel ...</p>
-          <p><b>Leeftijd</b>: 8 tot 11 jaar</p>
-          <p><b>Leiding</b>: Seppe, Siebe, Pieter-Jan, Dauwe en Arne</p>
-        </div>
-        <img src="/assets/img/takken/welpen.png" alt="">
-      </div>
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Jongverkenners</h3>
-          <p>Op woudlopersavontuur met de rugzak of op fietstocht met de patrouille. Een vlot sjorren of vuurtjes stoken en je eigen potje koken. Zo leren we de kneepjes van het vak. Een toneelstuk in mekaar steken en je creativiteit botvieren of stevig spelen en sporten: jongverkenners zijn aan zet!</p>
-          <p><b>Leeftijd</b>: 11 tot 14 jaar</p>
-          <p><b>Leiding</b>: Miro, Timon, Joran, Dario en Pieter</p>
-        </div>
-        <img src="/assets/img/takken/jonggivers.png" alt="">
-      </div>
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Verkenners</h3>
-          <p>We gaan een stapje verder. Verkenners bieden we alle kansen om te bewijzen wat ze in hun mars hebben. Er is ruimte om te experimenteren en mee te beslissen. Grootse projecten kleuren hun scoutsdag, maar gewoon gezellig samen zijn hoort er ook bij.</p>
-          <p>Verkenner zijn, is een van de tofste jaren dat je als lid zult beleven.  We zorgen voor uitdagende activiteiten die onvergetelijk zullen zijn en waaruit ook dingen te leren zijn. Een van de tofste momenten van de verkenners is zeker het kamp! Het kamp voor de verkenners gaat altijd van 20 tot 31 juli door.</p>
-          <p><b>Leeftijd</b>: 14 tot 17 jaar</p>
-          <p><b>Leiding</b>: Nicolaas en Warre</p>
-        </div>
-        <img src="/assets/img/takken/givers.png" alt="">
-      </div>
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Jin</h3>
-          <p>Jij en Ik, een Noodzaak!</p>
-          <p>Wat is JIN zijn? Dat bepalen ze zelf. Leiding is geen leiding meer, maar begeleiding. Wie weet slaan ze dit jaar hun tenten in het buitenland op, krijgt het JIN-lokaal een Keith Harring-look of is muziek de factor die hen bindt. Inspraak, ploeggeest en zelfstandigheid staan voorop. JINs zijn zwervers; blijvend onderweg ...</p>
-          <p><b>Leeftijd</b>: 17 tot 18 jaar</p>
-          <p><b>Leiding</b>: Sven en Kobe</p>
-        </div>
-        <img src="/assets/img/takken/jin.png" alt="">
-      </div>
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Leiding</h3>
-          <p>Leiders en leidsters zijn jonge mensen die in hun vrije tijd zorgen voor sfeer, activiteiten en werking per tak en per groep; ze doen dat door samen met hun leden te spelen en met hen onderweg te zijn. Leiding is verantwoordelijk voor de organisatie en het toezicht tijdens scouting. Scouts en Gidsen Vlaanderen voorziet een vormingsaanbod voor leid(st)ers.</p>
-          <p><b>Leeftijd</b>: 18+ jaar</p>
-          <p><b>Groepsleiding</b>: Siebe en Gertjan</p>
-        </div>
-        <img src="/assets/img/takken/leiding.png" alt="">
-      </div>
-      <div class="tak">
-        <div class="tak-content">
-          <h3>Akabe</h3>
-          <p>Bij de scouts is er plaats voor iedereen, verschillen zien we als een plus. Scouting is nagenoeg de enige jeugdbeweging met een aanbod voor kinderen en jongeren met een beperking. Er zijn aparte Akabegroepen, maar er zijn ook groepen die als tak behoren tot een andere scouts. Onze scoutsgroep heeft een Akabetak voor jongens èn meisjes met een beperking. Akabe is dus zotte scoutservaringen opdoen, dingen bijleren, vrienden leren kennen, leuke activiteiten doen en natuurlijk ook een stevige dosis plezier!</p>
-          <p><b>Leeftijd</b>: 6 tot 21 jaar</p>
-          <p><b>Leiding</b>: Emma, Jannes, Hanne, Laurine, Lara en Delphine</p>
-        </div>
-        <img src="/assets/img/takken/akabe.png" alt="">
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 <section class="uniform">
   <div class="container">
     <article>
-      <h3>Uniform</h3>
-      <p>
-        Met het dragen van het uniform toon je dat je scout of gids bent en
-        verwijs je naar de waarden van de beweging. Het uniform geeft leden
-        en leiding de mogelijkheid om hun verbondenheid te tonen en laat
-        toch ruimte voor een persoonlijke touch. Het uniform bestaat voor
-        iedereen in alle takken uit een aantal zelfde eenvoudige
-        basisstukken, goed van snit om in te ravotten: een beige hemd,
-        bruin-groene trui en groene korte of lange broek.
-      </p>
-      <p>
-        Kapoenen hebben geen voorgeschreven uniform, maar alle stukken zijn
-        ook in kapoenenmaten beschikbaar. Welpen en kabouters kunnen een
-        groene pet dragen. Het uniform kan je kopen in één van de Hopper
-        winkels of online. Ook de kentekens en patrouillelintjes vind je bij
-        Hopper winkel of de leiding.
-      </p>
-      <p>
-        In onze scouts zijn er geen echte regels wat betreft het uniform.
-        Wel moet iedereen ten allen tijde zijn hemd en sjaaltje bij zich
-        hebben.
-      </p>
+      {% capture c %}{% include content/uniform.md %}{% endcapture %}{{ c | markdownify }}
     </article>
     <img src="/assets/img/uniform.png" />
   </div>
@@ -179,102 +67,25 @@ transparent_header: true
     </nav>
     <div class="steps swiper" style="--n: 5;" swiper-for=".groepsadmin nav">
       <div class="step step-content">
-        <h3>Individuele steekkaart</h3>
-        <p>
-          De individuele steekkaart bevat gegevens over elk actief scoutslid en vervangt de vroegere medische fiche. Deze informatie draagt bij aan een veilige en persoonlijke begeleiding van alle leden en wordt vertrouwelijk behandeld door de leidingsploeg.
-        </p>
-        <p>
-          Om deze gegevens up-to-date te houden hebben we natuurlijk input nodig van de ouders. Meerderjarige leiding kan hun gegevens zelf beheren.
-        </p>
-        <p>
-          Sinds enkele jaren is de individuele steekkaart digitaal te vinden op de Groepsadministratie-website van Scouts en Gidsen Vlaanderen.
-        </p>
-        <p>
-          Het voordeel is dat de gegevens slechts éénmalig ingevuld moeten worden. Ze blijven bewaard op de online Groepsadministratie en moeten de volgende jaren enkel gecontroleerd worden. Indien nodig kan je als ouder zelf gegevens wijzigen.
-        </p>
-        <p>
-          De takleiding kan dan alles afprinten of informatie van jullie kinderen opzoeken via computer of smartphone.
-        </p>
-        <a class="step-link step-link-large" href="/#individuele-steekkaart-2">Instructies</a>
+        {% capture c %}{% include content/groepsadmin/stap_1.md %}{% endcapture %}{{ c | markdownify }}
       </div>
       <div class="step">
         <div class="step-content">
-          <h3>De groepsadmin</h3>
-          <p>
-            Surf naar <br><a href="https://groepsadmin.scoutsengidsenvlaanderen.be">groepsadmin.scoutsengidsenvlaanderen.be</a>
-          </p>
-          <p>
-            Voor velen zal dit de eerste keer zijn op deze website dus moet je je kind eerst registreren. Voor elk kind maak je apart een login / gebruikersnaam aan. Het is immers de bedoeling dat ze hun gegevens zelf beheren als ze oud genoeg zijn.
-          </p>
-          <p>
-            Als je al een login / gebruikersnaam hebt kan je meteen naar <a class="step-link" href="/#individuele-steekkaart-4">Stap 4</a>
-          </p>
-          <a class="step-link step-link-large" href="/#individuele-steekkaart-3">Volgende</a>
+          {% capture c %}{% include content/groepsadmin/stap_2.md %}{% endcapture %}{{ c | markdownify }}
         </div>
         <img class="step-aside" src="/assets/img/groepsadmin_1.jpg" alt="" loading="lazy">
       </div>
       <div class="step">
         <div class="step-content">
-          <h3>Registreren</h3>
-          <p>Vul alle velden correct in:</p>
-          <ul>
-            <li><em>voornaam</em> van het kind</li>
-            <li><em>achternaam</em> van het kind</li>
-            <li><em>lidnummer</em>: Dit kan je opvragen bij de verantwoordelijke groepsadministratie (mirostuyven@scoutsheirbrug.be)</li>
-          </ul>
-          <p>Klik <span class="ga-btn ga-registratie">Volgende ></span></p>
-          <ul>
-            <li><em>gebruikersnaam</em>: gebruik voornaam.achternaam, zo vergeet je deze nooit</li>
-            <li><em>wachtwoord</em></li>
-            <li><em>wachtwoordcontrole</em></li>
-          </ul>
-          <p>Klik <span class="ga-btn ga-registratie">Volgende ></span></p>
-          <ul>
-            <li><em>e-mailadres</em>: mag bij meerdere kinderen het hetzelfde zijn</li>
-            <li><em>gsm-nummer</em>: mag bij meerdere kinderen het hetzelfde zijn</li>
-          </ul>
-          <p>Klik <span class="ga-btn ga-registratie">Account aanmaken</span></p>
-          <p>
-            Je krijgt "De registratie is succesvol" op je scherm
-          </p>
-          <a class="step-link step-link-large" href="/#individuele-steekkaart-4">Volgende</a>
+          {% capture c %}{% include content/groepsadmin/stap_3.md %}{% endcapture %}{{ c | markdownify }}
         </div>
         <img class="step-aside" src="/assets/img/groepsadmin_2.jpg" alt="" loading="lazy">
       </div>
       <div class="step step-content">
-        <h3>Inloggen</h3>
-        <p>
-          Surf naar <br><a href="https://groepsadmin.scoutsengidsenvlaanderen.be">groepsadmin.scoutsengidsenvlaanderen.be</a> en meld je aan met je gebruikersnaam + wachtwoord.
-        </p>
-        <p>
-          Op deze pagina kan je de persoonlijke gegevens van je kind, adres- en contactgegevens aanpassen. <i>De grijze velden zijn enkel aanpasbaar door de verantwoordelijke groepsadministratie van je groep.</i>
-        </p>
-        <p>
-          Je kan meerdere adressen aanmaken en meerdere contactpersonen (klik hiervoor op ‘+’).
-        </p>
-        <p>
-          Let wel op dat je steeds op de knop
-          <span class="ga-btn ga-opslaan"><svg width="14" height="14" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M512 1536h768v-384h-768v384zm896 0h128v-896q0-14-10-38.5t-20-34.5l-281-281q-10-10-34-20t-39-10v416q0 40-28 68t-68 28h-576q-40 0-68-28t-28-68v-416h-128v1280h128v-416q0-40 28-68t68-28h832q40 0 68 28t28 68v416zm-384-928v-320q0-13-9.5-22.5t-22.5-9.5h-192q-13 0-22.5 9.5t-9.5 22.5v320q0 13 9.5 22.5t22.5 9.5h192q13 0 22.5-9.5t9.5-22.5zm640 32v928q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h928q40 0 88 20t76 48l280 280q28 28 48 76t20 88z"/></svg> Opslaan</span>
-          drukt als je een wijzing wilt doorvoeren!
-        </p>
-        <a class="step-link step-link-large" href="/#individuele-steekkaart-5">Volgende</a>
+        {% capture c %}{% include content/groepsadmin/stap_4.md %}{% endcapture %}{{ c | markdownify }}
       </div>
       <div class="step step-content">
-        <h3>Individuele steekkaart</h3>
-        <p>
-          Klik op
-          <span class="ga-btn ga-steekkaart"><svg width="14" height="14" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1280 1120v-192q0-14-9-23t-23-9h-224v-224q0-14-9-23t-23-9h-192q-14 0-23 9t-9 23v224h-224q-14 0-23 9t-9 23v192q0 14 9 23t23 9h224v224q0 14 9 23t23 9h192q14 0 23-9t9-23v-224h224q14 0 23-9t9-23zm-640-736h512v-128h-512v128zm-384 0v1280h-32q-92 0-158-66t-66-158v-832q0-92 66-158t158-66h32zm1184 0v1280h-1088v-1280h160v-160q0-40 28-68t68-28h576q40 0 68 28t28 68v160h160zm352 224v832q0 92-66 158t-158 66h-32v-1280h32q92 0 158 66t66 158z"/></svg> Individuele steekkaart</span>
-        </p>
-        <p>
-          Vul de individuele steekkaart zo volledig mogelijk in, onderteken de steekkaart en klik op
-          <span class="ga-btn ga-opslaan"><svg width="14" height="14" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M512 1536h768v-384h-768v384zm896 0h128v-896q0-14-10-38.5t-20-34.5l-281-281q-10-10-34-20t-39-10v416q0 40-28 68t-68 28h-576q-40 0-68-28t-28-68v-416h-128v1280h128v-416q0-40 28-68t68-28h832q40 0 68 28t28 68v416zm-384-928v-320q0-13-9.5-22.5t-22.5-9.5h-192q-13 0-22.5 9.5t-9.5 22.5v320q0 13 9.5 22.5t22.5 9.5h192q13 0 22.5-9.5t9.5-22.5zm640 32v928q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h928q40 0 88 20t76 48l280 280q28 28 48 76t20 88z"/></svg> Opslaan</span>
-        </p>
-        <p>
-          De individuele steekkaart is nu helemaal in orde, de leiding kan deze altijd raadplegen wanneer nodig.
-        </p>
-        <p>
-          Als jullie vragen hebben of er werkt iets niet zo goed, stuur dan zeker en vast een mail naar de verantwoordelijke groepsadministratie: mirostuyven@scoutsheirbrug.be.
-        </p>
+        {% capture c %}{% include content/groepsadmin/stap_5.md %}{% endcapture %}{{ c | markdownify }}
       </div>
     </div>
   </div>
@@ -284,39 +95,7 @@ transparent_header: true
     <h2>Scouts Jan Berchmans</h2>
     <div class="line"></div>
     <article>
-      <p class="inleiding">
-        Oktober 1963 -  Jacques Lamproye, onderpastoor van de parochie Sint-Anna sinds 26 augustus 1963, richt een jongensscouts op de wijk Heirbrug op. Met de hulp van enkele ervaren leiders van de Sint-Laurentiusgroep (Lokeren-Centrum, Hoogland) worden een welpentak en een gezamenlijke tak voor jongverkenners en verkenners uit de grond gestampt. Ze gebruiken Den Uyl boven de parochiezaal als uitvalsbasis. De groep wordt genoemd naar Sint Jan Berchmans, patroonheilige van de jeugd.
-      </p>
-      <p>
-        Door het stijgende succes worden in het eerste werkjaar, in mei 1964, de jongverkenners en verkenners verdeeld over twee takken. Vanaf het tweede jaar wordt Marcel Saey groepsleider.
-        Onder leiding van Mark Ponnet worden in 1965 voorlopige houten barakken neergepoot waar de leden tijdelijk een onderkomen vinden. 
-        In 1968 viert VVKS Jan Berchmans zijn vijfjarig bestaan. De scouts telt op dat moment reeds 75 leden. In deze periode situeren zich ook de eerste “scoutsbals”, de later legendarische scoutsfuiven.
-        Omdat de nood aan vaste lokalen zich meer en meer begint op te dringen, wordt op 1 juli 1970 onder impuls van aannemer René Hullaert gestart met de fundamenten van nieuwe lokalen. Op 12 april 1971 zijn de bouwwerkzaamheden voltooid en volgt een officiële inhuldiging.
-        In oktober 1971 verlaat de oorspronkelijke bezieler Jacques Lamproye onze parochie en neemt Theo Brandt zijn aalmoezenierstaak over. Willy Tas neemt vanaf maar ’72 het groepsleiderschap over.
-      </p>
-      <p>
-        Op 4 november 1973 wordt het 10-jarig bestaan gevierd met een ledenaantal van 85 leden. Enkele maanden later, in januari 1974, wordt de eerste “Sjorring” Gepubliceerd onder de redactie van Maurice Vervaet.
-        In 1976 krijgen we naast de nieuwe lokalen van KLJ en Chiro een materiaalkot. In datzelfde jaar wordt door de extreme droogte op het allerlaatste moment de kampplaats afgezegd wegens brandgevaar. Gelukkig wordt in De Panne snel een nieuw verblijf gevonden.
-        In 1977 wordt Hilde Vervaet de eerste groepsleidster en in 1978 wordt deze functie voor de eerste keer gedeeld door drie personen: Hilde Vervaet, Fernand Rogiers en Walter Van De Voorde. Op 24 maart 1979 leidt dit drietal ongeveer 90 leden naar het 15-jarig bestaan.
-        De verkenners en jongverkenners worden echter door tegenslag getroffen in 1980. Het kamp wordt onvergetelijk om dat het hele kampterrein onder water loopt waardoor de jongverkenners vervroegd naar huis gestuurd worden. De verkenners, die op een hoger gelegen stuk land zitten, houden het droog en kunnen daarna nog van een zonnig kamp genieten! In datzelfde jaar is Mieken Van Damme de tweede groepsleidster in rij.
-        Tijdens het weekend van 28-30 april 1984 vieren we ons 20-jarig bestaan. Het ledenaantal bedraagt in de periode 80 rakkers van 6 tot 18 jaar.
-        In 1984 worden de jongste takken van Scouts Heirbrug en Chiro Sint-Anna gemengd. Deze tank word ‘Biekes’ genoemd. Deze werking zal tot 1991 duren.
-      </p>
-      <p>
-        Ook in 1984 wordt door Danny Heugens en Dirk Van Den Driessche gestart met een AKABE-tak voor andersvalide jongens en meisjes vanaf 6 jaar. Vroeger was dit een afkorting voor “Afdeling Koningin Astrid Bijzondere Eisen”, nu is deze benaming reeds lang veranderd in “Anders Kan Best”. Deze groep vergadert om de 14 dagen op zondag en sluit daarbij geregeld aan bij activiteiten van andere takken.
-        In de zomer van 1995 wordt de bouw van de nieuwe lokalen achteraan op het plein aangevat en wordt er ook met de jaarlijkse zomerbarbecue gestart. De JIN (bestaande uit de scouts van Heirbrug, Waasmunster en Sombeke) gaat dat jaar net als de vorige JIN-generatie opnieuw richting Oostblok. Het positieve neveneffect van deze samenwerking is dat de leidingsploeg sterk aangroeit. Waasmunster en Sombeke vonden dat minder aangenaam…
-      </p>
-      <img src="/assets/img/scouts_bbq.png" alt="">
-      <h6> </h6>
-      <p>
-        In augustus 2003 word de groepsleiding overgedragen aan Bruno Reniers en in april 2004 viert Scouts Heirbrug gedurende een heel weekend zijn 40ste verjaardag. Nadat de bouw van de nieuwe lokalen jarenlang stil lag door administratieve moeilijkheden komt er terug schot in de zaak. De nodige vergunningen worden afgeleverd waardoor de werken kunnen hervat worden.
-        AKABE viert in 2005 een originele verjaardag: haar 21ste !
-        In augustus 2007 neemt Sam Apers de groepsleiderstaak over van Bruno Reniers. Jonathan Van Kerckhove wordt adjunct-groepsleider. Het einde van de aanslepende bouwwerken komt stilaan in zicht! Koen Braet, de vader van drie scoutsleden, neemt de leiding van een bouwteam in handen.
-        Op 12 oktober 2011 overlijdt medeoprichter E.H. Jacques Lamproye te Gent.
-        Bij de start van het werkjaar 2012-2013 worden Thijs Suy en Karel Doffyn groepsleiding en worden de nieuwe lokalen officieel geopend! Het werkjaar erna wordt het hele terrein opgewaardeerd, er komt een nieuw materiaalkot en houtkot, het terrein wordt groter, er worden speelheuvels aangelegd en bomen aangeplant.
-        In het werkjaar 2013 – 2014 vieren we ons 50-jarig bestaan in het weekend van 11-13 april 2014. Ook onze AKABE-tak mag 30 kaarsjes uitblazen!
-        In 2015 werd er 100 jaar scouts in Lokeren gevierd samen met Scouts Hoogland en Gidsen Edelweiss. Hierover liep een tentoonstelling in het Lokers Stadsmuseum en werd er door de heemkundige kring ‘De Soevereinen’ een boek uitgebracht. De inbreng hiervoor werd toen door Thomas Saey en Ryan Daeyaert voorzien.
-      </p>
+      {% capture c %}{% include content/geschiedenis.md %}{% endcapture %}{{ c | markdownify }}
     </article>
     <div class="line"></div>
   </div>
