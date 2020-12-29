@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Ruby
-        uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+        uses: ruby/setup-ruby@8bc9ca9ace0139aae24423f15269b9673354b495
         with:
           ruby-version: 2.6
       - uses: actions/cache@v2
