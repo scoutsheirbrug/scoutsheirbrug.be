@@ -43,7 +43,8 @@ header {
   width: 100%;
   top: 0;
   padding: 0 20px 0 20px;
-  font-family: "Playfair Display SC", serif;
+  font-family: "Open Sans", sans-serif;
+  /* font-family: "Playfair Display SC", serif; */
   transition: 0.2s ease-in-out;
   background-color: transparent;
   box-shadow: none;
@@ -164,6 +165,7 @@ footer .footer-credits {
 .showcase img {
   width: 300px;
   margin: 0 0 20px 0;
+  filter: drop-shadow(0 0 1rem #000);
 }
 
 .showcase .actions {
