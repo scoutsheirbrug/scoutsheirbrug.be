@@ -192,6 +192,25 @@ footer .footer-credits {
   color: #000;
 }
 
+.showcase .scroll-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+  filter: drop-shadow(0 0 0.3em #000);
+  animation: 1s ease-in-out 0.5s infinite alternate bobbing;
+  transition: opacity ease-in-out 0.2s;
+}
+
+.showcase .scroll-icon.scrolled {
+  opacity: 0;
+}
+
+@keyframes bobbing {
+  from { top: 0; }
+  to { top: 10px; }
+}
+
 /* ABOUT-US */
 
 .about-us {

@@ -2,18 +2,16 @@
 /* Header */
 const header = document.querySelector("header");
 const showcase = document.querySelector(".showcase");
+const scrollIcon = document.querySelector(".scroll-icon");
 
-const showcaseObserver = new IntersectionObserver((entries) => {
+const scroller = (el) => (entries) => {
   entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
+    el.classList.toggle('scrolled', !entry.isIntersecting)
   });
-}, { rootMargin: '-150px 0px 0px 0px' });
+}
 
-showcaseObserver.observe(showcase);
+new IntersectionObserver(scroller(header), { rootMargin: '-150px 0px 0px 0px' }).observe(showcase);
+new IntersectionObserver(scroller(scrollIcon), { threshold: 1 }).observe(showcase);
 
 /* Groepsadmin */
 function updateGroepsadminNav() {
