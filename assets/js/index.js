@@ -21,6 +21,12 @@ function updateGroepsadminNav() {
     // Scroll
     const y = groepsadmin.getBoundingClientRect().top + window.pageYOffset;
     window.scrollTo({behavior: 'smooth', top: y - 65})
+    setTimeout(() => {
+      const y2 = groepsadmin.getBoundingClientRect().top + window.pageYOffset;
+      if (y2 !== y) {
+        window.scrollTo({behavior: 'smooth', top: y2 - 65})
+      }
+    }, 200)
     // Update navigation
     const step = (match[1] ?? 1) - 1
     const nav = [...groepsadmin.querySelector('.container nav').children];

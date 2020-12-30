@@ -477,11 +477,11 @@ footer .footer-credits {
   font-size: 72px;
 }
 
-.geschiedenis .line {
+.geschiedenis hr {
   width: 100%;
-  background-color: var(--accent-color);
-  height: 10px;
   margin: 10px 0;
+  border: none;
+  border-bottom: 10px solid var(--accent-color);
 }
 
 .geschiedenis article {
@@ -500,13 +500,6 @@ footer .footer-credits {
   font-style: italic;
   font-weight: bold;
   color: #333333;
-}
-
-.geschiedenis h6 {
-  padding: 0 8px 4px 8px;
-  font-size: 10px;
-  font-weight: normal;
-  font-style: italic;
 }
 
 /* BOX */
@@ -550,10 +543,6 @@ footer .footer-credits {
   padding-top: 15px;
   margin: 0;
   margin-left: 5%;
-}
-
-.box h6 {
-  margin: 12px;
 }
 
 .box > *:last-child:not(div):not(iframe) {

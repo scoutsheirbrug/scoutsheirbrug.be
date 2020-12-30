@@ -1,4 +1,6 @@
 ### Individuele steekkaart
+{:id=""}
+
 De individuele steekkaart bevat gegevens over elk actief scoutslid en vervangt de vroegere medische fiche. Deze informatie draagt bij aan een veilige en persoonlijke begeleiding van alle leden en wordt vertrouwelijk behandeld door de leidingsploeg.
 
 Om deze gegevens up-to-date te houden hebben we natuurlijk input nodig van de ouders. Meerderjarige leiding kan hun gegevens zelf beheren.
