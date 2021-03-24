@@ -104,6 +104,7 @@ header nav > a {
   top: 65px;
   opacity: 0;
   transition: 0.2s ease-in-out;
+  pointer-events: none;
 }
 
 header nav > a img {
@@ -952,6 +953,7 @@ body.pdf-enlarged footer {
 
   header.scrolled nav > a {
     opacity: 1;
+    pointer-events: initial;
   }
 
   header.scrolled nav ul {
@@ -1015,9 +1017,14 @@ body.pdf-enlarged footer {
 
 @media screen and (max-width: 740px), (max-aspect-ratio: 7/8) {
 
+  .pdf-viewer {
+    position: unset;
+  }
+
   .pdf-viewer button[data-page] {
     bottom: 10px;
     transform: none;
+    position: fixed;
   }
 
   .pdf-viewer button[data-page="-1"] {
@@ -1029,13 +1036,21 @@ body.pdf-enlarged footer {
   }
 
   .pdf-viewer button.pdf-enlarge {
-    bottom: 10px;
-    right: 70px;
+    display: none;
   }
 
   .pdf-viewer button.pdf-external {
     bottom: 10px;
-    right: 130px;
+    right: 70px;
+    position: fixed;
+  }
+
+  .pdf-viewer canvas {
+    max-height: unset;
+  }
+
+  section.sjorring ~ footer {
+    display: none;
   }
 }
 
