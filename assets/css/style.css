@@ -799,6 +799,26 @@ section embed {
 .pdf-viewer {
   position: relative;
   min-height: calc(100vh - 65px);
+  display: flex;
+  align-items: self-start;
+}
+
+.pdf-viewer .page-right {
+  box-shadow: -5px 0 10px -5px #000;
+}
+
+.pdf-viewer .page-hidden {
+  display: none;
+}
+
+body.pdf-enlarged .pdf-viewer .page-right {
+  display: none;
+}
+
+@media (max-aspect-ratio: 8/5) {
+  .pdf-viewer .page-right {
+    display: none;
+  }
 }
 
 .pdf-viewer button {
@@ -991,6 +1011,9 @@ body.pdf-enlarged footer {
   .takken .tak {
     flex-direction: column;
   }
+}
+
+@media screen and (max-width: 740px), (max-aspect-ratio: 7/8) {
 
   .pdf-viewer button[data-page] {
     bottom: 10px;
