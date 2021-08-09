@@ -31,6 +31,9 @@
         <li {% if page.url == '/verhuur/' %}class="active"{%endif%}>
           <a href="/verhuur">Verhuur</a>
         </li>
+        <li {% if page.url contains '/fotos/' %}class="active"{%endif%}>
+          <a href="/fotos">Foto's</a>
+        </li>
         <li {% if page.url == '/contact/' %}class="active"{%endif%}>
           <a href="/contact">Contact</a>
         </li>
