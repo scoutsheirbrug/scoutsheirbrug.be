@@ -1,7 +1,6 @@
 ---
 layout: foto_set
 title: Grootkamp 2021
-permalink: /fotos/grootkamp2021/
 
 set: grootkamp2021
 thumb: PXL_20210723_170634087.MP.jpg
