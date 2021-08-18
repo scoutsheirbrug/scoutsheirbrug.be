@@ -3,11 +3,6 @@ We verhuren twee maal per maand ons gebouw en plein. Onze lokalen zijn ideaal vo
 
 <hr>
 
-### Covid-19
-Wegens Covid-19 ligt de verhuur stil tot tegenbericht.
-
-<hr>
-
 ### Algemeen
 Deze worden NIET verhuurd in/voor volgende gevallen:
 - leidingsweekends
