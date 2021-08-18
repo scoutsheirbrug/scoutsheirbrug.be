@@ -936,44 +936,6 @@ body.pdf-enlarged footer {
   height: 1780px;
 }
 
-.foto-sets {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.foto-sets a {
-  color: #000;
-}
-
-.foto-sets .thumb {
-  width: 300px;
-  height: 300px;
-  background-size: cover;
-  border-radius: 8px;
-}
-
-.foto-set {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.fotos {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 15px;
-  --row-height: 200px;
-}
-
-.fotos img {
-  display: block;
-  height: var(--row-height);
-  min-width: calc(var(--row-height) * 2 / 3);
-  background: #d6d6d6;
-  margin: 2px;
-}
-
 /* Small */
 @media screen and (max-width: 740px) {
   .container {
@@ -996,11 +958,6 @@ body.pdf-enlarged footer {
 
   header.scrolled nav ul {
     margin-left: 40px;
-  }
-
-  header nav li a {
-    margin: 3px;
-    padding: 9px;
   }
 
   footer .container {
@@ -1056,11 +1013,6 @@ body.pdf-enlarged footer {
   .takken .tak {
     flex-direction: column;
   }
-
-  .fotos img {
-    width: 100%;
-    height: unset;
-  }
 }
 
 @media screen and (max-width: 740px), (max-aspect-ratio: 7/8) {
@@ -1114,7 +1066,7 @@ body.pdf-enlarged footer {
 
   header nav li a {
     margin: 3px;
-    padding: 5px;
+    padding: 9px;
   }
 
   .geschiedenis h2 {
