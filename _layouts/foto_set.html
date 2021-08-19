@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <section>
   <div class="container foto-set-info">
     <h1>{{ page.title }}</h1>
@@ -10,7 +9,7 @@ layout: default
   <div class="fotos">
     {% for image in page.images %}
     <div class="foto">
-      <img src="{{ site.baseurl }}/assets/fotos/{{page.set}}/{{ image }}" alt="" loading="lazy">
+      <img src="{{ site.baseurl }}/assets/thumbs/fotos/{{ page.set }}/{{ image }}" alt="" loading="lazy">
     </div>
     {% endfor %}
   </div>
