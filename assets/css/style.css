@@ -33,6 +33,10 @@ a {
   text-decoration: none;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 /* HEADER */
 
 header {
@@ -971,6 +975,7 @@ body.pdf-enlarged footer {
   position: relative;
   flex-basis: calc(25% - 4px);
   margin: 2px;
+  cursor: pointer;
 }
 
 .foto::after {
@@ -985,6 +990,26 @@ body.pdf-enlarged footer {
   width: 100%;
   object-fit: cover;
   background: #d6d6d6;
+}
+
+.foto-detail {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 65px);
+  display: none;
+  background-color: #000a;
+}
+
+.foto-detail.active {
+  display: block;
+}
+
+.foto-detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Small */
@@ -1199,7 +1224,7 @@ body.pdf-enlarged footer {
   }
 
   .foto {
-    flex-basis: calc(16.667% - 4px);
+    flex-basis: calc(16.666% - 4px);
   }
 }
 
