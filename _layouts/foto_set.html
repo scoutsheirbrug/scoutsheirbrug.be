@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section>
+  <div class="container foto-set-info">
+    <h1>{{ page.title }}</h1>
+    <span>{{ page.images.size }} Foto's</span>
+  </div>
+  <div class="fotos">
+    {% for image in page.images %}
+    <div class="foto">
+      <img src="{{ site.baseurl }}/assets/thumbs/fotos/{{ page.set }}/{{ image }}" alt="" loading="lazy">
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<div class="foto-detail">
+</div>
+<script src="/assets/js/fotos.js"></script>

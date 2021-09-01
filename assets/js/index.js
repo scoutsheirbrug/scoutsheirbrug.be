@@ -11,7 +11,7 @@ const scroller = (el) => (entries) => {
 }
 
 new IntersectionObserver(scroller(header), { rootMargin: '-150px 0px 0px 0px' }).observe(showcase);
-new IntersectionObserver(scroller(scrollIcon), { threshold: 1 }).observe(showcase);
+new IntersectionObserver(scroller(scrollIcon), { threshold: 0.9 }).observe(showcase);
 
 /* Groepsadmin */
 function updateGroepsadminNav() {

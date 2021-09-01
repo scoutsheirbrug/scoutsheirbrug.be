@@ -1,0 +1,16 @@
+---
+title: Foto's
+layout: default
+---
+<section>
+	<div class="container foto-sets">
+		{% assign foto_sets = site.pages | where: "layout", "foto_set" %}
+		{% for set_page in foto_sets %}
+			<a href="{{ site.baseurl }}{{ set_page.url }}">
+				<img class="thumb" src="{{ site.baseurl }}/assets/thumbs/fotos/{{ set_page.set }}/{{ set_page.thumb }}" alt="">
+				<h2>{{ set_page.title }}</h2>
+				<span>{{ set_page.images.size }} Foto's</span>
+			</a>
+		{% endfor %}
+	</div>
+</section>
