@@ -3,4 +3,4 @@ Op woudlopersavontuur met de rugzak of op fietstocht met de patrouille. Een vlot
 
 **Leeftijd**: 11 tot 14 jaar
 
-**Leiding**: Miro, Timon, Joran, Dario en Pieter
+**Leiding**: Miro, Dauwe, Arne, Mauri en Joran
