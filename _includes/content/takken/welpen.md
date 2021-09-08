@@ -3,4 +3,4 @@ Is het leven een jungle of een speeltuin? Welpen leren zélf spannende dingen do
 
 **Leeftijd**: 8 tot 11 jaar
 
-**Leiding**: Seppe, Siebe, Pieter-Jan, Dauwe en Arne
+**Leiding**: Warre, Siebe, Thomas, Meerten, Lander en Ilya
