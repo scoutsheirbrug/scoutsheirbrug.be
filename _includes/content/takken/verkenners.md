@@ -5,4 +5,4 @@ Verkenner zijn, is een van de tofste jaren dat je als lid zult beleven.  We zorg
 
 **Leeftijd**: 14 tot 17 jaar
 
-**Leiding**: Nicolaas en Warre
+**Leiding**: Pieter-Jan, Kobe en Timon
