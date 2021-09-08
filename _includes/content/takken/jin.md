@@ -5,4 +5,4 @@ Wat is JIN zijn? Dat bepalen ze zelf. Leiding is geen leiding meer, maar begelei
 
 **Leeftijd**: 17 tot 18 jaar
 
-**Leiding**: Sven en Kobe
+**Leiding**: Jordy, Seppe en Gertjan
