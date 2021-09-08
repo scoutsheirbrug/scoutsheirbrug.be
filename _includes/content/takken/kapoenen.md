@@ -5,4 +5,4 @@ Het hoogtepunt in een kapoenenleven? Voor de eerste keer op kamp!
 
 **Leeftijd**: 6 tot 8 jaar
 
-**Leiding**: Meerten, Gertjan, Pepijn en Jordy
+**Leiding**: Pieter, Chiel, Sven en Tom
