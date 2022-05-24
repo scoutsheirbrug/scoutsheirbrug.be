@@ -14,6 +14,7 @@ const viewer = document.querySelector('.pdf-viewer[data-pdf]');
     updatePages();
     renderAllPages();
   } catch (e) {
+    console.error('Failed to load PDF: ', e.message)
     pages = []
     viewer.classList.add('failed')
     viewer.querySelector('embed').setAttribute('src', viewer.getAttribute('data-pdf'))

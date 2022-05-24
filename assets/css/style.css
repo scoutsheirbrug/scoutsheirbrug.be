@@ -309,6 +309,7 @@ footer .footer-credits {
   flex-direction: column;
 }
 
+.kosten a,
 .verhuur a {
   color: #3f63ac;
   fill: currentColor;
@@ -801,6 +802,27 @@ section embed {
   justify-content: center;
 }
 
+.sjorring-menu {
+  padding: 110px 0 0 0;
+  background-color: #263741;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 179px);
+}
+
+.sjorring-menu a {
+  color: #fff;
+  display: block;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: #071d2b;
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .pdf-viewer {
   position: relative;
   min-height: calc(100vh - 65px);
@@ -927,6 +949,21 @@ body.pdf-enlarged .pdf-viewer button.pdf-external {
 
 body.pdf-enlarged footer {
   display: none;
+}
+
+.praktisch h2, .kosten h2, .kosten h4 {
+  padding-bottom: 0.5em;
+}
+
+.kosten em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.kosten span {
+  font-size: small;
+  font-style: italic;
+  color: #444;
 }
 
 .inschrijven {
