@@ -1071,6 +1071,37 @@ body.pdf-enlarged footer {
   color: #444;
 }
 
+
+/* BBQ */
+.showcase.bbq {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  height: 20vw;
+  min-height: 40vh;
+}
+
+.bbq {
+  background-image: url(../img/bbq.jpg);
+}
+
+.action.bbq {
+  background-size: cover;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px #000;
+}
+
+.bbq h2 {
+  font-size: 26px;
+  filter: drop-shadow(0 0 1rem #000);
+}
+
+.bbq h4 {
+  margin: 0 0 20px 0;
+  font-weight: normal;
+  filter: drop-shadow(0 0 1rem #000);
+}
+
 /* Small */
 @media screen and (max-width: 740px) {
   .container {
