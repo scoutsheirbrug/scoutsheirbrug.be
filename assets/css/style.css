@@ -951,21 +951,6 @@ body.pdf-enlarged footer {
   display: none;
 }
 
-.praktisch h2, .kosten h2, .kosten h4 {
-  padding-bottom: 0.5em;
-}
-
-.kosten em {
-  font-weight: bold;
-  font-style: normal;
-}
-
-.kosten span {
-  font-size: small;
-  font-style: italic;
-  color: #444;
-}
-
 .inschrijven {
   display: flex;
   flex-direction: column;
@@ -1048,6 +1033,42 @@ body.pdf-enlarged footer {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.faq {
+  margin-top: 1rem;
+}
+
+.faq summary {
+  border-bottom: 1px solid #d8d8d8;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.faq summary:hover, .faq[open] summary {
+  background-color: #ececec;
+}
+
+.faq[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+.faq p:last-child {
+  padding-bottom: 0;
+} 
+
+.faq em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.faq span {
+  font-size: small;
+  font-style: italic;
+  color: #444;
 }
 
 /* Small */

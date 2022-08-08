@@ -1,0 +1,8 @@
+<details class="faq">
+	<summary>
+		{{ include.q }}
+	</summary>
+	{% capture path %}faqs/{{ include.a }}.md{% endcapture %}
+	{% capture c %}{% include {{path}} %}{% endcapture %}
+	{{ c | markdownify }}
+</details>
