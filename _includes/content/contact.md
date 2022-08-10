@@ -28,3 +28,10 @@ Voor vragen over de verhuur kan je terecht op:
 Facturen mogen worden doorgestuurd naar:
 
 - [financien@scoutsheirbrug.be](mailto:financien@scoutsheirbrug.be)
+
+<hr>
+
+### Locatie
+Veerstraat 14, 9160 Lokeren
+
+Vergaderingen elke zondag van 14u tot 17u.

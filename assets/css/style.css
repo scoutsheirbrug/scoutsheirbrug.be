@@ -2,8 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --accent-color: #071d2b;
-  --accent-light: #7eb8dd;
+
+  --accent-1: #071d2b;
+  --accent-2: #263741;
+  --accent-3: #3f63ac;
+  --accent-4: #7eb8dd;
+  --accent-5: #909497;
 }
 
 /* GOBAL */
@@ -27,6 +31,11 @@ body::-webkit-scrollbar {
   width: 80%;
   max-width: 1400px;
   margin: auto;
+}
+
+.verhuur .container,
+.contact .container {
+  max-width: 800px;
 }
 
 a {
@@ -56,7 +65,7 @@ header {
 }
 
 header.scrolled {
-  background-color: var(--accent-color);
+  background-color: var(--accent-1);
   box-shadow: #000 0px 0px 20px 0px;
 }
 
@@ -118,14 +127,14 @@ header nav > a img {
 
 header nav li.active a {
   font-weight: bold;
-  color: var(--accent-light);
+  color: var(--accent-4);
 }
 
 /* FOOTER */
 
 footer {
-  padding: 20px 10px;
-  background-color: var(--accent-color);
+  padding: 20px 10px 10px;
+  background-color: var(--accent-1);
   color: #fff;
 }
 
@@ -139,7 +148,7 @@ footer .footer-info {
 }
 
 footer a {
-  color: var(--accent-light);
+  color: var(--accent-4);
 }
 
 footer .footer-info img {
@@ -150,7 +159,20 @@ footer .footer-credits {
   padding: 20px 0;
   display: flex;
   justify-content: flex-end;
-  color: #909497;
+  color: var(--accent-5);
+}
+
+footer .footer-links a {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+footer .footer-links svg {
+  fill: var(--accent-4);
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 /* SHOWCASE */
@@ -234,7 +256,7 @@ footer .footer-credits {
   width: 300px;
   flex-basis: 30%;
   min-height: 200px;
-  border-top: 10px solid var(--accent-color);
+  border-top: 10px solid var(--accent-1);
 }
 
 .about-us .eye-catcher h3 {
@@ -301,7 +323,7 @@ footer .footer-credits {
 /* VERHUUR */
 
 .verhuur {
-  padding: 100px 0 60px 0;
+  padding: 80px 0 60px 0;
 }
 
 .verhuur .container {
@@ -309,13 +331,14 @@ footer .footer-credits {
   flex-direction: column;
 }
 
-.kosten a,
-.verhuur a {
-  color: #3f63ac;
+.faq a,
+.box a:not(.button) {
+  color: var(--accent-3);
   fill: currentColor;
+  text-decoration: underline;
 }
 
-.verhuur a.button {
+.button {
   margin: 15px auto 0;
   display: block;
   padding: 5px;
@@ -324,28 +347,24 @@ footer .footer-credits {
   width: 56%;
   text-align: center;
   color: #fff;
-  background-color: var(--accent-color);
+  cursor: pointer;
+  background-color: var(--accent-1);
+  text-decoration: none;
 }
 
-.verhuur a.button:hover {
-  background-color: var(--accent-light);
+.button:hover {
+  background-color: var(--accent-3);
 }
 
 .verhuur span {
   font-weight: bold;
 }
 
-.verhuur iframe {
-  display: block;
-  width: 95%;
-  margin: 12px auto;
-  height: 350px;
-}
-
 .verhuur .pictures {
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
+  padding: 10px 25px;
 }
 
 .verhuur .control {
@@ -354,21 +373,8 @@ footer .footer-credits {
 }
 
 .verhuur .control label {
-  text-align: center;
-  border: none;
-  border-radius: 50px;
-  color: #fff;
   width: 100px;
-  height: 30px;
   margin: 6px;
-  padding: 3px 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  background-color: var(--accent-color);
-}
-
-.verhuur .control label:hover {
-  background: var(--accent-light);
 }
 
 .verhuur .slidershow {
@@ -441,35 +447,6 @@ footer .footer-credits {
   padding: 100px 0 35px 0;
 }
 
-.contact .container {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact .maps {
-  padding: 6px 10px;
-}
-
-.contact iframe {
-  width: 100%;
-}
-
-.contact a {
-  color: #3f63ac;
-  fill: currentColor;
-}
-
-.contact .social {
-  display: flex;
-  justify-content: space-around;
-}
-
-.contact svg {
-  fill: var(--accent-color);
-  width: 50px;
-  margin: 20px;
-}
-
 /* GESCHIEDENIS */
 
 .geschiedenis {
@@ -487,7 +464,7 @@ footer .footer-credits {
   width: 100%;
   margin: 10px 0;
   border: none;
-  border-bottom: 10px solid var(--accent-color);
+  border-bottom: 10px solid var(--accent-1);
 }
 
 .geschiedenis article {
@@ -512,19 +489,14 @@ footer .footer-credits {
 
 .box {
   margin-bottom: 35px;
-  background-color: #d9dddc;
-  border: 2px solid var(--accent-color);
-  border-radius: 20px;
 }
 
 .box h2 {
-  border-radius: 15px 15px 0 0;
   text-align: center;
   width: 100%;
   margin: 0;
   padding: 5px;
-  color: #fff;
-  background-color: var(--accent-color);
+  font-size: 32px;
 }
 
 .box h3 {
@@ -533,22 +505,27 @@ footer .footer-credits {
 }
 
 .box p {
-  padding: 15px 25px 0;
+  padding: 10px 25px;
   text-align: justify;
 }
 
 .box hr {
   width: 80%;
-  padding-top: 15px;
-  margin: auto;
+  margin: 15px auto 5px;
   border: none;
-  border-bottom: 2px solid #999da0;
+  border-bottom: 2px solid #dcdcdc;
 }
 
 .box ul {
-  padding-top: 15px;
   margin: 0;
   margin-left: 5%;
+}
+
+.box iframe {
+  display: block; 
+  padding: 10px 25px;
+  width: 100%;
+  height: 400px;
 }
 
 .box > *:last-child:not(div):not(iframe) {
@@ -559,7 +536,7 @@ footer .footer-credits {
 
 .takken {
   padding: 20px 0;
-  background-color: #263741;
+  background-color: var(--accent-2);
   color: #fff;
 }
 
@@ -673,7 +650,7 @@ section embed {
 
 .groepsadmin {
   padding: 20px 0;
-  background-color: #263741;
+  background-color: var(--accent-2);
   color: #fff;
 }
 
@@ -711,7 +688,8 @@ section embed {
 }
 
 .groepsadmin .step a:not(.step-link) {
-  color: var(--accent-light);
+  color: var(--accent-4);
+  text-decoration: underline;
 }
 
 .groepsadmin .step .step-aside {
@@ -797,30 +775,18 @@ section embed {
 
 .sjorring {
   padding: 65px 0 0 0;
-  background-color: #263741;
+  background-color: var(--accent-2);
   display: flex;
   justify-content: center;
 }
 
 .sjorring-menu {
   padding: 110px 0 0 0;
-  background-color: #263741;
+  background-color: var(--accent-2);
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: calc(100vh - 179px);
-}
-
-.sjorring-menu a {
-  color: #fff;
-  display: block;
-  padding: 8px 12px;
-  font-size: 16px;
-  background-color: #071d2b;
-  border-radius: 4px;
-  width: 200px;
-  text-align: center;
-  margin-bottom: 16px;
 }
 
 .pdf-viewer {
@@ -853,7 +819,7 @@ body.pdf-enlarged .pdf-viewer .page-right {
   height: 50px;
   position: absolute;
   z-index: 1;
-  background: var(--accent-color);
+  background: var(--accent-1);
   color: #fff;
   fill: currentColor;
   border: none;
@@ -1102,6 +1068,10 @@ body.pdf-enlarged footer {
   filter: drop-shadow(0 0 1rem #000);
 }
 
+.bbq-info {
+  padding: 20px 0;
+}
+
 /* Small */
 @media screen and (max-width: 740px) {
   .container {
@@ -1263,7 +1233,7 @@ body.pdf-enlarged footer {
   .about-us .eye-catcher {
     height: 300px;
     border-top: none;
-    border-left: 10px solid var(--accent-color);
+    border-left: 10px solid var(--accent-1);
   }
 
   .about-us .eye-catcher h3 {
@@ -1283,17 +1253,6 @@ body.pdf-enlarged footer {
 
   .uniform img {
     width: 40%;
-  }
-
-  .contact .container,
-  .verhuur .container {
-    flex-direction: row;
-  }
-
-  .contact .container > *,
-  .verhuur .container > * {
-    margin: 0 20px;
-    width: 50%;
   }
 
   .fotos {
