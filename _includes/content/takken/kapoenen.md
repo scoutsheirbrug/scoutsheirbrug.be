@@ -5,4 +5,4 @@ Het hoogtepunt in een kapoenenleven? Voor de eerste keer op kamp!
 
 **Leeftijd**: 6 tot 8 jaar
 
-**Leiding**: Pieter, Chiel, Sven en Tom
+**Leiding**: Pieter-Jan, Meerten, Seppe, Warre en Tars

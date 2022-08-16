@@ -3,6 +3,4 @@ Leiders en leidsters zijn jonge mensen die in hun vrije tijd zorgen voor sfeer, 
 
 **Leeftijd**: 18+ jaar
 
-**Groepsleiding**: Siebe en Gertjan
-
-**Adjunct-Groepsleiding**: Joran, Pieter en Timon
+**Groepsleiding**: Miro en Timon
