@@ -24,7 +24,7 @@ Je hebt heel wat rechten. Hieronder kan je een duidelijk overzicht vinden van di
 #### 1. Gegevens inkijken
 Je kan jouw gegevens op verschillende manieren raadplegen. Heb je een account op de Groepsadministratie, dan kan je daar verschillende persoonsgegevens bekijken en/of bewerken.
 
-Wil je een overzicht krijgen van alle gegevens die we in ons bezit hebben, neem dan contact op met Gertjan Coppens en / of Siebe Verhoeven (groepsleiding@scoutsheirbrug.be).
+Wil je een overzicht krijgen van alle gegevens die we in ons bezit hebben, neem dan contact op met Miro Stuyven en / of Timon Van Poucke (groepsleiding@scoutsheirbrug.be).
 
 #### 2. Gegevens verbeteren of aanvullen
 Zijn bepaalde gegevens die we bijhouden niet meer correct? Dan kan je die steeds laten aanpassen of aanvullen.
@@ -100,4 +100,4 @@ Persoonsgegevens worden nooit doorgegeven of verkocht aan derden.
 ### Wijzigingen aan deze verklaring
 Deze privacyverklaring kan steeds aangepast worden. De meest recente versie kan steeds geraadpleegd worden via www.scoutsheirbrug.be/privacy.
 
-Laatste aanpassing: 01/01/2021
+Laatste aanpassing: 29/08/2022

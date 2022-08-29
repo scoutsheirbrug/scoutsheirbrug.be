@@ -11,14 +11,14 @@ In 1976 krijgen we naast de nieuwe lokalen van KLJ en Chiro een materiaalkot. In
 In 1977 wordt Hilde Vervaet de eerste groepsleidster en in 1978 wordt deze functie voor de eerste keer gedeeld door drie personen: Hilde Vervaet, Fernand Rogiers en Walter Van De Voorde. Op 24 maart 1979 leidt dit drietal ongeveer 90 leden naar het 15-jarig bestaan.
 De verkenners en jongverkenners worden echter door tegenslag getroffen in 1980. Het kamp wordt onvergetelijk om dat het hele kampterrein onder water loopt waardoor de jongverkenners vervroegd naar huis gestuurd worden. De verkenners, die op een hoger gelegen stuk land zitten, houden het droog en kunnen daarna nog van een zonnig kamp genieten! In datzelfde jaar is Mieken Van Damme de tweede groepsleidster in rij.
 Tijdens het weekend van 28-30 april 1984 vieren we ons 20-jarig bestaan. Het ledenaantal bedraagt in de periode 80 rakkers van 6 tot 18 jaar.
-In 1984 worden de jongste takken van Scouts Heirbrug en Chiro Sint-Anna gemengd. Deze tank word ‘Biekes’ genoemd. Deze werking zal tot 1991 duren.
+In 1984 worden de jongste takken van Scouts Heirbrug en Chiro Sint-Anna gemengd. Deze tank wordt ‘Biekes’ genoemd. Deze werking zal tot 1991 duren.
 
 Ook in 1984 wordt door Danny Heugens en Dirk Van Den Driessche gestart met een AKABE-tak voor andersvalide jongens en meisjes vanaf 6 jaar. Vroeger was dit een afkorting voor “Afdeling Koningin Astrid Bijzondere Eisen”, nu is deze benaming reeds lang veranderd in “Anders Kan Best”. Deze groep vergadert om de 14 dagen op zondag en sluit daarbij geregeld aan bij activiteiten van andere takken.
 In de zomer van 1995 wordt de bouw van de nieuwe lokalen achteraan op het plein aangevat en wordt er ook met de jaarlijkse zomerbarbecue gestart. De JIN (bestaande uit de scouts van Heirbrug, Waasmunster en Sombeke) gaat dat jaar net als de vorige JIN-generatie opnieuw richting Oostblok. Het positieve neveneffect van deze samenwerking is dat de leidingsploeg sterk aangroeit. Waasmunster en Sombeke vonden dat minder aangenaam…
 
 ![](/assets/img/scouts_bbq.png)
 
-In augustus 2003 word de groepsleiding overgedragen aan Bruno Reniers en in april 2004 viert Scouts Heirbrug gedurende een heel weekend zijn 40ste verjaardag. Nadat de bouw van de nieuwe lokalen jarenlang stil lag door administratieve moeilijkheden komt er terug schot in de zaak. De nodige vergunningen worden afgeleverd waardoor de werken kunnen hervat worden.
+In augustus 2003 wordt de groepsleiding overgedragen aan Bruno Reniers en in april 2004 viert Scouts Heirbrug gedurende een heel weekend zijn 40ste verjaardag. Nadat de bouw van de nieuwe lokalen jarenlang stil lag door administratieve moeilijkheden komt er terug schot in de zaak. De nodige vergunningen worden afgeleverd waardoor de werken kunnen hervat worden.
 AKABE viert in 2005 een originele verjaardag: haar 21ste !
 In augustus 2007 neemt Sam Apers de groepsleiderstaak over van Bruno Reniers. Jonathan Van Kerckhove wordt adjunct-groepsleider. Het einde van de aanslepende bouwwerken komt stilaan in zicht! Koen Braet, de vader van drie scoutsleden, neemt de leiding van een bouwteam in handen.
 Op 12 oktober 2011 overlijdt medeoprichter E.H. Jacques Lamproye te Gent.
