@@ -42,7 +42,7 @@ Een aantal gegevens verwerken we op basis van het gerechtvaardigd belang van onz
 #### 5. Rechten uitoefenen
 We helpen je graag bij het uitoefenen van je rechten. Probeer steeds gedetailleerd weer te geven welk(e) recht(en) je wenst uit te oefenen; we proberen je dan zo goed mogelijk te helpen. Om aan je vraag te voldoen, zullen we in de meeste gevallen jouw identiteit controleren. In dat geval zal een kopie van jouw identiteitskaart gevraagd worden. Zo voorkomen we dat iemand anders jouw gegevens gebruikt of misbruikt.
 
-Voor alle vragen, opmerkingen of klachten kan je contact opnemen met Gertjan Coppens en / of Siebe Verhoeven (groepsleiding@scoutsheirbrug.be).
+Voor alle vragen, opmerkingen of klachten kan je contact opnemen met Miro Stuyven en / of Timon Van Poucke (groepsleiding@scoutsheirbrug.be).
 
 Scouts en Gidsen Vlaanderen vzw heeft een Functionaris voor Gegevensbescherming, te bereiken via privacy@scoutsengidsenvlaanderen.be of door een brief te sturen naar Scouts en Gidsen Vlaanderen vzw, TAV Functionaris voor Gegevensbescherming, Wilrijkstraat 45, 2140 Antwerpen.
 
@@ -100,4 +100,4 @@ Persoonsgegevens worden nooit doorgegeven of verkocht aan derden.
 ### Wijzigingen aan deze verklaring
 Deze privacyverklaring kan steeds aangepast worden. De meest recente versie kan steeds geraadpleegd worden via www.scoutsheirbrug.be/privacy.
 
-Laatste aanpassing: 29/08/2022
+Laatste aanpassing: 13/02/2023
