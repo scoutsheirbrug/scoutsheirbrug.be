@@ -434,10 +434,11 @@ footer .footer-links svg {
   user-select: none;
 }
 
-#control1:checked ~ .buiten,
-#control2:checked ~ .beneden,
-#control3:checked ~ .boven,
-#control4:checked ~ .sanitair {
+#control1:checked ~ .beneden,
+#control2:checked ~ .boven,
+#control3:checked ~ .keuken,
+#control4:checked ~ .sanitair,
+#control5:checked ~ .buiten {
   display: flex;
 }
 
