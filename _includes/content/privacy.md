@@ -24,7 +24,7 @@ Je hebt heel wat rechten. Hieronder kan je een duidelijk overzicht vinden van di
 #### 1. Gegevens inkijken
 Je kan jouw gegevens op verschillende manieren raadplegen. Heb je een account op de Groepsadministratie, dan kan je daar verschillende persoonsgegevens bekijken en/of bewerken.
 
-Wil je een overzicht krijgen van alle gegevens die we in ons bezit hebben, neem dan contact op met Miro Stuyven en / of Timon Van Poucke (groepsleiding@scoutsheirbrug.be).
+Wil je een overzicht krijgen van alle gegevens die we in ons bezit hebben, neem dan contact op met de groepsleiding (groepsleiding@scoutsheirbrug.be).
 
 #### 2. Gegevens verbeteren of aanvullen
 Zijn bepaalde gegevens die we bijhouden niet meer correct? Dan kan je die steeds laten aanpassen of aanvullen.
@@ -42,7 +42,7 @@ Een aantal gegevens verwerken we op basis van het gerechtvaardigd belang van onz
 #### 5. Rechten uitoefenen
 We helpen je graag bij het uitoefenen van je rechten. Probeer steeds gedetailleerd weer te geven welk(e) recht(en) je wenst uit te oefenen; we proberen je dan zo goed mogelijk te helpen. Om aan je vraag te voldoen, zullen we in de meeste gevallen jouw identiteit controleren. In dat geval zal een kopie van jouw identiteitskaart gevraagd worden. Zo voorkomen we dat iemand anders jouw gegevens gebruikt of misbruikt.
 
-Voor alle vragen, opmerkingen of klachten kan je contact opnemen met Miro Stuyven en / of Timon Van Poucke (groepsleiding@scoutsheirbrug.be).
+Voor alle vragen, opmerkingen of klachten kan je contact opnemen met de groepsleiding (groepsleiding@scoutsheirbrug.be).
 
 Scouts en Gidsen Vlaanderen vzw heeft een Functionaris voor Gegevensbescherming, te bereiken via privacy@scoutsengidsenvlaanderen.be of door een brief te sturen naar Scouts en Gidsen Vlaanderen vzw, TAV Functionaris voor Gegevensbescherming, Wilrijkstraat 45, 2140 Antwerpen.
 
@@ -100,4 +100,4 @@ Persoonsgegevens worden nooit doorgegeven of verkocht aan derden.
 ### Wijzigingen aan deze verklaring
 Deze privacyverklaring kan steeds aangepast worden. De meest recente versie kan steeds geraadpleegd worden via www.scoutsheirbrug.be/privacy.
 
-Laatste aanpassing: 13/02/2023
+Laatste aanpassing: 01/09/2023
