@@ -533,6 +533,44 @@ footer .footer-links svg {
   padding-bottom: 12px;
 }
 
+/* STARTDAG */
+.startdag {
+  padding: 0;
+}
+
+.startdag h2 {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.startdag h3 {
+  padding: 0 20px 10px;
+  color: hsl(0, 0%, 27%);
+  font-weight: normal;
+}
+
+.startdag p {
+  padding: 5px 20px 5px;
+}
+
+.startdag-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+}
+
+.startdag-images img {
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .startdag-images {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* TAKKEN */
 
 .takken {
