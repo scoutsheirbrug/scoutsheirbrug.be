@@ -2,3 +2,9 @@ collections:
   pages:
     output: true
     permalink: /:path/
+
+exclude:
+  - tmp/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
