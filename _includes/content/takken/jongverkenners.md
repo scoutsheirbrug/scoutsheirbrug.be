@@ -3,4 +3,4 @@ Op woudlopersavontuur met de rugzak of op fietstocht met de patrouille. Een vlot
 
 **Leeftijd**: 11 tot 14 jaar
 
-**Leiding**: Lander, Siebe, Ewout, Arne, Dauwe en Henri
+**Leiding**: Warre, Pieter-Jan, Chiel en Tiebe

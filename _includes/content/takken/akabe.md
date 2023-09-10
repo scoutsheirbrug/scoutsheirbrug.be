@@ -3,4 +3,4 @@ Bij de scouts is er plaats voor iedereen, verschillen zien we als een plus. Scou
 
 **Leeftijd**: 6 tot 21 jaar
 
-**Leiding**: Hanne, Jannes, Emma K, Delphine, Pepijn, Nel, Lara en Emma V
+**Leiding**: Hanne, Emma K, Emma V en Delphine
