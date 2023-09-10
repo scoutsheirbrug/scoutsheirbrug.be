@@ -14,11 +14,9 @@ transparent_header: true
 </section>
 <section class="startdag">
   <div class="container">
-    <h2>Startdag</h2>
-    <h3>Zin om samen spannende avonturen te beleven? Kom zondag <b>10 september</b> naar onze startdag!</h3>
-    <p><b>Voor wie?</b> Jongens tussen de 6 en 17 jaar</p>
-    <p><b>Waar?</b> Achter de kerk van Heirbrug</p>
-    <p><b>Wanneer?</b> Elke zondag van 14u tot 17u</p>
+    <article>
+      {% capture c %}{% include content/startdag.md %}{% endcapture %}{{ c | markdownify }}
+    </article>
   </div>
   <div class="startdag-images">
     <img src="/assets/img/startdag_1.jpg" alt="">

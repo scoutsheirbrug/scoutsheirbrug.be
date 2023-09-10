@@ -332,7 +332,8 @@ footer .footer-links svg {
 }
 
 .faq a,
-.box a:not(.button) {
+.box a:not(.button),
+.startdag a {
   color: var(--accent-3);
   fill: currentColor;
   text-decoration: underline;
@@ -538,8 +539,12 @@ footer .footer-links svg {
   padding: 0;
 }
 
+.startdag article {
+  padding-top: 20px;
+}
+
 .startdag h2 {
-  padding: 20px;
+  padding-bottom: 20px;
   font-size: 30px;
   text-align: center;
 }
