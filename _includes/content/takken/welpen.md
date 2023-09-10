@@ -3,4 +3,4 @@ Is het leven een jungle of een speeltuin? Welpen leren zélf spannende dingen do
 
 **Leeftijd**: 8 tot 11 jaar
 
-**Leiding**: Lucas, Miro en Pritam
+**Leiding**: Lucas, Miro, Tars en Pritam
