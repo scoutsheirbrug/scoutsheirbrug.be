@@ -175,6 +175,72 @@ footer .footer-links svg {
   margin-right: 5px;
 }
 
+/* POPOVER */
+
+.popover {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  max-width: 30vw;
+  z-index: 5;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: #171717;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s, background-color 0.2s;
+  opacity: 0;
+}
+
+.popover.visible {
+  opacity: 1;
+}
+
+.popover > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.popover > span {
+  margin-top: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+
+.popover:hover {
+  background-color: #242424;
+}
+
+.popover-dismiss {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background: #000;
+  border: 1px solid #fff;
+  border-radius: 9999px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popover:hover .popover-dismiss {
+  opacity: 0.4;
+}
+
+.popover .popover-dismiss:hover {
+  opacity: 1;
+}
+
 /* SHOWCASE */
 
 .showcase {
@@ -1153,6 +1219,10 @@ body.pdf-enlarged footer {
     padding: 20px;
   }
 
+  .popover {
+    max-width: 60vw;
+  }
+
   .showcase img {
     width: 250px;
     height: auto;
@@ -1257,6 +1327,10 @@ body.pdf-enlarged footer {
   header nav li a {
     margin: 3px;
     padding: 5px;
+  }
+
+  .popover {
+    max-width: 80vw;
   }
 
   .geschiedenis h2 {

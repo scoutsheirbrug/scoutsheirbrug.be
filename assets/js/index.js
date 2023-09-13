@@ -13,6 +13,24 @@ const scroller = (el) => (entries) => {
 new IntersectionObserver(scroller(header), { rootMargin: '-150px 0px 0px 0px' }).observe(showcase);
 new IntersectionObserver(scroller(scrollIcon), { threshold: 0.9 }).observe(showcase);
 
+/* Popover */
+document.querySelectorAll('[data-popover]').forEach(popover => {
+  const id = popover.getAttribute('data-popover')
+  const dismissed = localStorage.getItem(`popover_dismissed_${id}`)
+  if (dismissed !== null) {
+    return
+  }
+  setTimeout(() => {
+    popover.classList.add('visible')
+  }, 1000)
+  const button = popover.querySelector('.popover-dismiss')
+  button?.addEventListener('click', (e) => {
+    localStorage.setItem(`popover_dismissed_${id}`, new Date().toISOString())
+    popover.classList.remove('visible')
+    e.preventDefault()
+  })
+})
+
 /* Groepsadmin */
 function updateGroepsadminNav() {
   const match = location.hash.match(/individuele-steekkaart(?:-(\d))?/);
