@@ -16,10 +16,10 @@ new IntersectionObserver(scroller(scrollIcon), { threshold: 0.9 }).observe(showc
 /* Popover */
 document.querySelectorAll('[data-popover]').forEach(popover => {
   const id = popover.getAttribute('data-popover')
-  const dismissed = localStorage.getItem(`popover_dismissed_${id}`)
-  if (dismissed !== null) {
-    return
-  }
+  // const dismissed = localStorage.getItem(`popover_dismissed_${id}`)
+  // if (dismissed !== null) {
+  //   return
+  // }
   setTimeout(() => {
     popover.classList.add('visible')
   }, 1000)
