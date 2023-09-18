@@ -3,7 +3,7 @@ title: Foto's
 layout: default
 ---
 <section>
-	<div class="container foto-sets">
+	<div class="container foto-album-list">
 		{% assign foto_sets = site.pages | where: "layout", "foto_set" %}
 		{% for set_page in foto_sets %}
 			<a href="{{ site.baseurl }}{{ set_page.url }}">
@@ -13,4 +13,9 @@ layout: default
 			</a>
 		{% endfor %}
 	</div>
+	<div class="foto-album">
+	</div>
 </section>
+<div class="foto-detail">
+</div>
+<script src="/assets/js/fotos.js"></script>

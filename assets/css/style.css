@@ -1040,31 +1040,35 @@ body.pdf-enlarged footer {
   height: 1780px;
 }
 
-.foto-sets {
+.foto-album-list {
   margin-top: 30px;
   margin-bottom: 30px;
-  display: flex;
   flex-wrap: wrap;
+  display: none;
 }
 
-.foto-sets a {
+.foto-album-list.visible {
+  display: flex;
+}
+
+.foto-album-list a {
   color: #000;
   margin: 4px;
 }
 
-.foto-sets .thumb {
+.foto-album-list .thumb {
   width: 256px;
   height: 256px;
   background-size: cover;
   border-radius: 8px;
 }
 
-.foto-set-info {
+.foto-album-info {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
-.fotos {
+.foto-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 15px;
@@ -1099,12 +1103,15 @@ body.pdf-enlarged footer {
   left: 0;
   width: 100%;
   height: calc(100% - 65px);
+  padding: 8px;
   display: none;
-  background-color: #000a;
+  background-color: #000c;
+  justify-self: center;
+  align-items: center;
 }
 
 .foto-detail.active {
-  display: block;
+  display: flex;
 }
 
 .foto-detail img {
@@ -1271,7 +1278,7 @@ body.pdf-enlarged footer {
     flex-direction: column;
   }
 
-  .fotos {
+  .foto-list {
     margin: 0 -12px;
     width: calc(100% + 24px);
   }
@@ -1375,7 +1382,7 @@ body.pdf-enlarged footer {
     width: 40%;
   }
 
-  .fotos {
+  .foto-list {
     max-width: unset;
     width: 80%;
     margin: 0 auto;

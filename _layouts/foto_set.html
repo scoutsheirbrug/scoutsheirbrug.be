@@ -2,11 +2,11 @@
 layout: default
 ---
 <section>
-  <div class="container foto-set-info">
+  <div class="container foto-album-info">
     <h1>{{ page.title }}</h1>
     <span>{{ page.images.size }} Foto's</span>
   </div>
-  <div class="fotos">
+  <div class="foto-list">
     {% for image in page.images %}
     <div class="foto">
       <img src="{{ site.baseurl }}/assets/thumbs/fotos/{{ page.set }}/{{ image }}" alt="" loading="lazy">
@@ -16,4 +16,4 @@ layout: default
 </section>
 <div class="foto-detail">
 </div>
-<script src="/assets/js/fotos.js"></script>
+<script src="/assets/js/legacy_fotos.js"></script>
