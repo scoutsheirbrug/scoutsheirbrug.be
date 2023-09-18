@@ -191,10 +191,12 @@ footer .footer-links svg {
   align-items: center;
   transition: opacity 0.5s, background-color 0.2s;
   opacity: 0;
+  pointer-events: none;
 }
 
 .popover.visible {
   opacity: 1;
+  pointer-events: inherit;
 }
 
 .popover > img {
