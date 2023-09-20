@@ -9,7 +9,7 @@ async function loadLibrary(libraryContainer, libraryId) {
 
 	for (const album of library.albums) {
 		const albumCard = document.createElement('a')
-		albumCard.href = `?album=${album.id}`
+		albumCard.href = `?album=${album.slug ?? album.id}`
 		const albumImg = document.createElement('img')
 		albumImg.classList.add('thumb')
 		if (album.cover) {
@@ -37,7 +37,7 @@ async function loadAlbum(albumContainer, libraryId, albumId, photoId, includeInf
 		albumId = library.albums.find(a => a.photos.some(p => p.id === photoId) ? a.id : null)
 	}
 	if (!albumId) return
-	const album = library.albums.find(a => a.id === albumId)
+	const album = library.albums.find(a => a.slug === albumId || a.id === albumId)
 
 	const photoDetail = document.querySelector('.foto-detail')
 
@@ -53,11 +53,28 @@ async function loadAlbum(albumContainer, libraryId, albumId, photoId, includeInf
 		albumContainer.append(albumInfo)
 	}
 
+	function openPhoto(id) {
+		document.documentElement.classList.add('noscroll')
+		const detailImg = document.createElement('img')
+		detailImg.src = `${FOTO_API}/photo/${id}?size=preview`
+		const fullImg = new Image()
+		fullImg.onload = () => {
+			detailImg.src = fullImg.src
+		}
+		fullImg.src = `${FOTO_API}/photo/${id}?size=original`
+		photoDetail.classList.add('active')
+		photoDetail.innerHTML = ''
+		photoDetail.append(detailImg)
+		const params = new URLSearchParams(location.search)
+		params.set('foto', id)
+		history.replaceState(null, '', `?${params.toString()}`)
+	}
+
 	const photoList = document.createElement('div')
 	photoList.classList.add('foto-list')
 	for (const photo of album.photos) {
 		const photoCard = document.createElement('a')
-		photoCard.href = `?album=${album.id}&foto=${photo.id}`
+		photoCard.href = `?album=${album.slug ?? album.id}&foto=${photo.id}`
 		photoCard.classList.add('foto')
 		const photoImg = document.createElement('img')
 		photoImg.src = `${FOTO_API}/photo/${photo.id}?size=thumbnail`
@@ -66,17 +83,7 @@ async function loadAlbum(albumContainer, libraryId, albumId, photoId, includeInf
 		photoList.append(photoCard)
 		photoCard.addEventListener('click', e => {
 			e.preventDefault()
-			document.documentElement.classList.add('noscroll')
-			const detailImg = document.createElement('img')
-			detailImg.src = `${FOTO_API}/photo/${photo.id}?size=preview`
-			const fullImg = new Image()
-			fullImg.onload = () => {
-				detailImg.src = fullImg.src
-			}
-			fullImg.src = `${FOTO_API}/photo/${photo.id}?size=original`
-			photoDetail.classList.add('active')
-			photoDetail.innerHTML = ''
-			photoDetail.append(detailImg)
+			openPhoto(photo.id)
 		})
 	}
 	albumContainer.append(photoList)
@@ -84,7 +91,14 @@ async function loadAlbum(albumContainer, libraryId, albumId, photoId, includeInf
 	photoDetail.addEventListener('click', () => {
 		document.documentElement.classList.remove('noscroll')
 		photoDetail.classList.remove('active')
+		const params = new URLSearchParams(location.search)
+		params.delete('foto')
+		history.replaceState(null, '', `?${params.toString()}`)
 	})
+
+	if (photoId) {
+		openPhoto(photoId)
+	}
 }
 
 const searchParams = new URLSearchParams(location.search)

@@ -968,7 +968,7 @@ body.pdf-enlarged footer {
 
 .foto-album-list a {
   color: #000;
-  margin: 4px;
+  margin: 4px 4px 16px;
 }
 
 .foto-album-list .thumb {
