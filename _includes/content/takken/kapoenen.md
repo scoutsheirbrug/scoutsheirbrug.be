@@ -4,5 +4,3 @@ Het leven van een kapoen is er één vol spel, fantasie, creativiteit en express
 Het hoogtepunt in een kapoenenleven? Voor de eerste keer op kamp!
 
 **Leeftijd**: 6 tot 8 jaar
-
-**Leiding**: Dario, Mauri en Pritesh

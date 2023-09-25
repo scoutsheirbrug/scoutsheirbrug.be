@@ -573,41 +573,7 @@ footer .footer-links svg {
 
 .takken h2 {
   padding: 20px;
-}
-
-.takken nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.takken nav label {
-  padding: 0 15px;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  margin: 4px 4px;
   text-align: center;
-  font-size: 15px;
-  cursor: pointer;
-  filter: drop-shadow(0 0 0.3em #000);
-  transition: 0.4s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.takken nav label.active,
-.takken nav label:hover {
-  background: #fff;
-  color: #000;
-}
-
-.takken .swiper {
-  height: 100%;
 }
 
 .takken .tak {
@@ -616,12 +582,40 @@ footer .footer-links svg {
   padding: 20px;
   overflow: hidden;
   text-align: justify;
+  align-items: start;
 }
 
-.takken .tak img {
-  width: 30%;
-  float: right;
+.takken .tak .tak-content {
+  width: 100%;
+  flex-basis: 2;
+}
+
+.takken .tak:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.takken .tak .tak-image {
+  flex-basis: 1;
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 33%;
+}
+
+.takken .tak .tak-image img {
+  border-radius: 8px;
+}
+
+.takken .tak:nth-child(odd) .tak-image {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.takken .tak .tak-image p {
+  color: var(--accent-5);
+  margin-top: 4px;
+  text-align: center;
 }
 
 /* SECTIONS */
@@ -1162,6 +1156,15 @@ body.pdf-enlarged footer {
 
   .about-us .articles article {
     width: 50%;
+  }
+
+  .takken .tak {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .takken .tak .tak-image {
+    max-width: 300px;
   }
 
   .groepsadmin .step {

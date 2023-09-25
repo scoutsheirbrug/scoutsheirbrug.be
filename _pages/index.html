@@ -33,21 +33,17 @@ transparent_header: true
   <div class="container">
     {% assign takken = "kapoenen,welpen,jongverkenners,verkenners,jin,leiding,akabe" | split: "," %}
     <h2>Takken</h2>
-    <nav>
-      {% for tak in takken %}
-        <label>{{ tak | capitalize }}</label>
-      {% endfor %}
-    </nav>
-    <div class="swiper" style="--n: 7;" swiper-for=".takken nav">
-      {% for tak in takken %}
-        <div class="tak">
-          <div class="tak-content">
-            {% capture c %}{% include content/takken/{{tak}}.md %}{% endcapture %}{{ c | markdownify }}
-          </div>
-          <img src="/assets/img/takken/{{tak}}.png" alt="">
+    {% for tak in takken %}
+      <div class="tak">
+        <div class="tak-content">
+          {% capture c %}{% include content/takken/{{tak}}.md %}{% endcapture %}{{ c | markdownify }}
         </div>
-      {% endfor %}
-    </div>
+        <div class="tak-image">
+          <img src="/assets/img/tak_{{tak}}.jpg" alt="" loading="lazy">
+          {% capture c %}{% include content/takken_leiding/{{tak}}.md %}{% endcapture %}{{ c | markdownify }}
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </section>
 <section class="uniform">
