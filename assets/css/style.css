@@ -861,6 +861,18 @@ section embed {
   min-height: calc(100vh - 179px);
 }
 
+.sjorring-menu a {
+  color: var(--accent-4);
+  display: block;
+  padding: 8px 12px;
+  font-size: 16px;
+  background-color: var(--accent-1);
+  border-radius: 4px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .pdf-viewer {
   position: relative;
   min-height: calc(100vh - 65px);
