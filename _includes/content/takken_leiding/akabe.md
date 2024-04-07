@@ -1,1 +1,1 @@
-Hanne, Emma K, Emma V en Delphine
+Emma K, Emma V, Hanne en Delphine
