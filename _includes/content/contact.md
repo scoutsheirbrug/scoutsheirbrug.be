@@ -1,5 +1,5 @@
 ## Contact
-Bij Scouts Heirbrug hechten we veel belang aan een vlotte en transparante communicatie. Als je met vragen zit, mag je na de vergadering van je kind altijd een leider aanspreken. We zijn ook via email bereikbaar en voor zeer dringende zaken kan je altijd een berichtje sturen naar onze facebookpagina.
+Bij Scouts Heirbrug hechten we veel belang aan een vlotte en transparante communicatie. Als je met vragen zit, mag je na de vergadering van je kind altijd een leider aanspreken. We zijn ook via email bereikbaar en voor zeer dringende zaken kan je altijd een berichtje sturen naar [onze facebookpagina](https://www.facebook.com/profile.php?id=61558762738544).
 
 <hr>
 
