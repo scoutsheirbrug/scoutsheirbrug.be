@@ -9,6 +9,6 @@ Sinds enkele jaren is de individuele steekkaart digitaal te vinden op de Groepsa
 
 Het voordeel is dat de gegevens slechts éénmalig ingevuld moeten worden. Ze blijven bewaard op de online Groepsadministratie en moeten de volgende jaren enkel gecontroleerd worden. Indien nodig kan je als ouder zelf gegevens wijzigen.
 
-De takleiding kan dan alles afprinten of informatie van jullie kinderen opzoeken via computer of smartphone.
+De takleiding kan dan alles afprinten of informatie van je kind opzoeken via computer of smartphone.
 
 [Instructies](/#individuele-steekkaart-2){:class="step-link step-link-large"}

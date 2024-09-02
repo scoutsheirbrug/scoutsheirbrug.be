@@ -3,7 +3,7 @@ Vul alle velden correct in:
 
 - **voornaam** van het kind
 - **achternaam** van het kind
-- **lidnummer**: Dit kan je opvragen bij de verantwoordelijke groepsadministratie (mirostuyven@scoutsheirbrug.be)
+- **lidnummer**: Dit kan je opvragen bij de groepsleiding ([groepsleiding@scoutsheirbrug.be](mailto:groepsleiding@scoutsheirbrug.be))
 
 Klik <span class="ga-btn ga-registratie">Volgende ></span>
 
