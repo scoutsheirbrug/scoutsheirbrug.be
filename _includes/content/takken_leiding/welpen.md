@@ -1,1 +1,1 @@
-Miro, Pritam, Tars en Lucas
+Pieter-Jan, Jarre, Wout P, Wout V en Robbe

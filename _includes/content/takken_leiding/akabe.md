@@ -1,1 +1,1 @@
-Emma K, Emma V, Hanne en Delphine
+Hanne, Emma, Delphine, Pritesh en Lotte (niet op foto)
