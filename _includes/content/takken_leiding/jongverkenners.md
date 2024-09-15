@@ -1,1 +1,1 @@
-Tars, Dauwe, Arne, Henri en Miro
+Miro, Tars, Henri, Dauwe en Arne
