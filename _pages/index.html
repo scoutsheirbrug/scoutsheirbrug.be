@@ -34,13 +34,7 @@ transparent_header: true
           {% capture c %}{% include content/takken/{{tak}}.md %}{% endcapture %}{{ c | markdownify }}
         </div>
         <div class="tak-image">
-          {% if tak == "welpen" %}
-            <div class="tak-image-placeholder">
-              Nog geen foto...
-            </div>
-          {% else %}
-            <img src="/assets/img/tak_{{tak}}.jpg" alt="" loading="lazy">
-          {% endif %}
+          <img src="/assets/img/tak_{{tak}}.jpg" alt="" loading="lazy">
           {% capture c %}{% include content/takken_leiding/{{tak}}.md %}{% endcapture %}{{ c | markdownify }}
         </div>
       </div>
