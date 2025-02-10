@@ -1,4 +1,4 @@
-const FOTO_API = 'https://fotos.mirostuyven.com/api'
+const FOTO_API = 'https://patio.scoutsheirbrug.be/api'
 
 async function loadLibrary(libraryContainer, libraryId) {
 	if (!libraryContainer || !libraryId) return
