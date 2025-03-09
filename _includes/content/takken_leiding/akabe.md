@@ -1,1 +1,1 @@
-Hanne, Emma, Delphine, Pritesh en Lotte (niet op foto)
+Hanne, Emma, Delphine, Pritesh, Lotte (niet op foto), Améline (niet op foto) en Laurien (niet op foto)
