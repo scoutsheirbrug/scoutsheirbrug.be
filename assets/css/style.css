@@ -862,15 +862,18 @@ section embed {
   background-color: var(--accent-2);
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .sjorring ~ footer {
   display: none;
 }
 
+.sjorring object,
 .sjorring iframe {
   width: 100%;
-  min-height: calc(100vh - 65px);
+  max-width: 90vh;
+  height: 100%;
 }
 
 .sjorring-menu {
