@@ -5,18 +5,18 @@ Vul alle velden correct in:
 - **achternaam** van het kind
 - **lidnummer**: Dit kan je opvragen bij de groepsleiding ([groepsleiding@scoutsheirbrug.be](mailto:groepsleiding@scoutsheirbrug.be))
 
-Klik <span class="ga-btn ga-registratie">Volgende ></span>
+Klik op "Volgende"
 
 - **gebruikersnaam**: gebruik voornaam.achternaam, zo vergeet je deze nooit
 - **wachtwoord**
 - **wachtwoordcontrole**
 
-Klik <span class="ga-btn ga-registratie">Volgende ></span>
+Klik op "Volgende"
 
 - **e-mailadres**: mag bij meerdere kinderen het hetzelfde zijn
 - **gsm-nummer**: mag bij meerdere kinderen het hetzelfde zijn
 
-Klik <span class="ga-btn ga-registratie">Account aanmaken</span>
+Klik op "Account aanmaken"
 
 Je krijgt "De registratie is succesvol" op je scherm
 

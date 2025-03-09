@@ -1,11 +1,10 @@
 <h3>Individuele steekkaart</h3>
 <p>
-  Klik op
-  {% include individuele_steekkaart.html %}
+  Klik op <img src="/assets/img/groepsadmin_acties.png" alt="Acties" height="28px" style="position: relative; margin-top: -8px; top: 8px;"/> en ga dan naar "Individuele steekkaart".
 </p>
 <p>
   Vul de individuele steekkaart zo volledig mogelijk in, onderteken de steekkaart en klik op
-  {% include opslaan.html %}
+  <img src="/assets/img/groepsadmin_opslaan.png" alt="Opslaan" height="28px" style="position: relative; margin-top: -8px; top: 8px;"/>
 </p>
 <p>
   De individuele steekkaart is nu helemaal in orde, de leiding kan deze altijd raadplegen wanneer nodig.
