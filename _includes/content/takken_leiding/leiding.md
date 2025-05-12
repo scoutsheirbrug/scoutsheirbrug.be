@@ -1,1 +1,0 @@
-Groepsleiding: Mauri en Lander

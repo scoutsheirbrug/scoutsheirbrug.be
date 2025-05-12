@@ -175,6 +175,15 @@ footer .footer-links svg {
   margin-right: 5px;
 }
 
+footer .editor {
+  color: var(--accent-5);
+  cursor: pointer;
+}
+
+footer .editor:hover {
+  text-decoration: underline;
+}
+
 /* POPOVER */
 
 .popover {
@@ -411,6 +420,7 @@ footer .footer-links svg {
   text-decoration: underline;
 }
 
+.btn,
 .button {
   margin: 15px auto 0;
   display: block;
@@ -419,12 +429,14 @@ footer .footer-links svg {
   transition: 0.4s;
   width: 56%;
   text-align: center;
+  border: none;
   color: #fff;
   cursor: pointer;
   background-color: var(--accent-1);
   text-decoration: none;
 }
 
+.btn:hover,
 .button:hover {
   background-color: var(--accent-3);
 }
@@ -1400,4 +1412,143 @@ body.pdf-enlarged footer {
 @font-face {
   font-family: "Chomsky";
   src: url(/assets/fonts/Chomsky.woff);
+}
+
+/* EDITOR */
+
+.editing [data-edit] {
+  margin: 1.5rem 2rem 1.5rem 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.editing [data-edit]::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -8px;
+  top: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  background-color: #9ca3af;
+  border-radius: 0.25rem;
+  opacity: 0.2;
+}
+
+.editing [data-edit]:hover::before {
+  opacity: 0.3;
+}
+
+.editing [data-edit]::after {
+  content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M22.853,1.148a3.626,3.626,0,0,0-5.124,0L1.465,17.412A4.968,4.968,0,0,0,0,20.947V23a1,1,0,0,0,1,1H3.053a4.966,4.966,0,0,0,3.535-1.464L22.853,6.271A3.626,3.626,0,0,0,22.853,1.148ZM5.174,21.122A3.022,3.022,0,0,1,3.053,22H2V20.947a2.98,2.98,0,0,1,.879-2.121L15.222,6.483l2.3,2.3ZM21.438,4.857,18.932,7.364l-2.3-2.295,2.507-2.507a1.623,1.623,0,1,1,2.295,2.3Z"/></svg>');
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  left: calc(100% + 12px);
+  top: -8px;
+  width: 24px;
+  height: 24px;
+  padding: 3px 4px;
+  background-color: #9ca3af;
+  border-radius: 0.25rem;
+  opacity: 0.2;
+}
+
+.editing [data-edit]:hover::after {
+  opacity: 0.6;
+}
+
+.editing [data-edit]:has(.banner-image) {
+  margin: 0;
+}
+
+.editing [data-edit]:has(.banner-image)::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.editing [data-edit]:has(.banner-image)::after {
+  top: unset;
+  left: unset;
+  right: 8px;
+  bottom: 8px;
+}
+
+.modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #0005;
+}
+
+.modal {
+  max-width: 620px;
+  margin: 5rem auto;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  overscroll-behavior: none;
+}
+
+.modal h2 {
+  font-size: 1.25rem;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #d1d5db;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.modal p {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.modal a {
+  color: var(--accent-3);
+  text-decoration: underline;
+}
+
+.modal a:hover {
+  color: #030712;
+}
+
+.modal input[type="file"] {
+  padding: 0.25rem 0.5rem;
+}
+
+.modal input::file-selector-button {
+  background-color: #9ca3af;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  padding: 0.25rem 1rem;
+  background-color: #9ca3af;
+  border-radius: 0.25rem;
+}
+
+.toast-error {
+  background-color: #dd565e;
 }
