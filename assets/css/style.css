@@ -1520,6 +1520,7 @@ body.pdf-enlarged footer {
 }
 
 .modal a {
+  color: var(--accent-3);
   text-decoration: underline;
 }
 
@@ -1535,6 +1536,7 @@ body.pdf-enlarged footer {
   background-color: #9ca3af;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
+  border: none;
   cursor: pointer;
 }
 

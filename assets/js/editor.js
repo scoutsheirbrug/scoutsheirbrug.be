@@ -165,7 +165,7 @@ async function makeEdit(key) {
     return hasChanged
   }
   const newTextUtf8 = unescape(encodeURIComponent(newText))
-  const putRes = await fetch (`https://api.github.com/repos/${REPO}/contents/${path}?ref=${REF}`, {
+  const putRes = await fetch (`https://api.github.com/repos/${REPO}/contents/${path}`, {
     method: 'PUT',
     headers: {
       'Authorization': `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
@@ -173,6 +173,7 @@ async function makeEdit(key) {
     },
     body: JSON.stringify({
       message: commitMessage ?? `✏️ Bewerk ${key}`,
+      branch: REF,
       content: btoa(newTextUtf8),
       sha: getData.sha,
     })
@@ -202,7 +203,7 @@ async function uploadFile(path, key, file) {
     },
   })
   const existingSha = checkRes.ok ? (await checkRes.json()).sha : undefined
-  const uploadRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=${REF}`, {
+  const uploadRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
     method: 'PUT',
     headers: {
       'Authorization': `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
@@ -210,6 +211,7 @@ async function uploadFile(path, key, file) {
     },
     body: JSON.stringify({
       message: `⬆️ Upload ${key}: ${decodeURIComponent(path)}`,
+      branch: REF,
       content: base64,
       sha: existingSha,
     }),
