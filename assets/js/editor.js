@@ -332,7 +332,14 @@ function inlineHtmlToMarkdown(element) {
     if (child instanceof Text) {
       md += child.textContent.replace(/\s+/g, ' ')
     } else if (child instanceof HTMLAnchorElement) {
-      md += `[${child.textContent.replace(/\s+/g, ' ').trim()}](${child.href})`
+      const url = new URL(child.href, window.location.href)
+      const isInternal = url.hostname === window.location.hostname
+      const linkPath = isInternal ? url.pathname + url.search + url.hash : child.href
+      md += `[${child.textContent.replace(/\s+/g, ' ').trim()}](${linkPath})`
+    } else if (child instanceof HTMLElement && child.tagName === 'STRONG') {
+      md += `**${child.textContent.replace(/\s+/g, ' ').trim()}**`
+    } else if (child instanceof HTMLElement && child.tagName === 'EM') {
+      md += `*${child.textContent.replace(/\s+/g, ' ').trim()}*`
     }
   }
   return md.trim()
@@ -421,17 +428,31 @@ function inlineMarkdownToHtml(text) {
   let html = ''
   while (text.length > 0) {
     const linkMatch = text.match(/\[([^\]]+)\]\(([^)]+)\)/)
-    if (!linkMatch) {
+    const boldMatch = text.match(/\*\*([^*]+)\*\*/)
+    const italicMatch = text.match(/\*([^*]+)\*/)
+    const matches = [linkMatch, boldMatch, italicMatch]
+      .filter(m => m)
+      .sort((a, b) => a.index - b.index)
+
+    if (matches.length === 0) {
       html += escapeHtml(text)
       break
     }
 
-    if (linkMatch.index > 0) {
-      html += escapeHtml(text.substring(0, linkMatch.index))
+    const match = matches[0]
+    if (match.index > 0) {
+      html += escapeHtml(text.substring(0, match.index))
     }
-    const href = escapeHtml(linkMatch[2])
-    html += `<a href="${href}"${href.startsWith('https://') ? ' target="_blank"' : ''}>${escapeHtml(linkMatch[1])}</a>`
-    text = text.substring(linkMatch.index + linkMatch[0].length)
+    if (match === linkMatch) {
+      const href = escapeHtml(match[2])
+      const isExternal = /^https?:\/\//.test(href) && !href.startsWith(window.location.origin)
+      html += `<a href="${href}"${isExternal ? ' target="_blank"' : ''}>${escapeHtml(match[1])}</a>`
+    } else if (match === boldMatch) {
+      html += `<strong>${escapeHtml(match[1])}</strong>`
+    } else if (match === italicMatch) {
+      html += `<em>${escapeHtml(match[1])}</em>`
+    }
+    text = text.substring(match.index + match[0].length)
   }
   return html
 }

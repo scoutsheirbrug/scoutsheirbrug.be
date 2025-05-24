@@ -1437,6 +1437,7 @@ body.pdf-enlarged footer {
   border-radius: 0.25rem;
   font-size: 0.875rem;
   border: none;
+  resize: vertical;
 }
 
 .modal p {
