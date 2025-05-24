@@ -128,7 +128,12 @@ async function makeEdit(key) {
     if (!imgElement) {
       throw new Error('Kan dit element niet bewerken')
     }
-    const newFiles = await openModal('Afbeelding aanpassen', { type: 'file', accept: 'image/*', help: 'Tip: Je kan <a href="https://squoosh.app/" target="_blank">squoosh.app</a> gebruiken om een afbeelding kleiner te maken.' })
+    const newFiles = await openModal('Afbeelding aanpassen', {
+      subtitle: `Huidige afbeelding: <a href="${imgElement.src}" target="_blank">${decodeURIComponent(imgElement.src.split('/').pop())}</a>`,
+      type: 'file',
+      accept: 'image/*',
+      help: 'Tip: Je kan <a href="https://squoosh.app/" target="_blank">squoosh.app</a> gebruiken om een afbeelding kleiner te maken.',
+    })
     if (!newFiles || newFiles.length === 0) {
       return false
     }

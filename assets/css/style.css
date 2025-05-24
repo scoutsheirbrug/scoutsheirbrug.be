@@ -375,7 +375,8 @@ footer .editor:hover {
 
 .faq a,
 .box a:not(.button),
-.startdag a {
+.startdag a,
+.uniform a {
   color: var(--accent-3);
   fill: currentColor;
   text-decoration: underline;
@@ -430,20 +431,24 @@ footer .editor:hover {
 
 .geschiedenis article {
   columns: 4 200px;
+  column-gap: 32px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .geschiedenis p {
   font-size: 12px;
   text-align: justify;
-  padding: 4px 8px;
+  padding-bottom: 8px;
 }
 
 .geschiedenis-first p:first-child {
-  padding: 6px 8px;
   font-style: italic;
   font-weight: bold;
   color: #333333;
+}
+
+.geschiedenis picture {
+  display: block;
 }
 
 /* BOX */
