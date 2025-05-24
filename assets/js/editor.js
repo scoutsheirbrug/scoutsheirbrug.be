@@ -122,6 +122,23 @@ async function makeEdit(key) {
       element.href = `/${pdfPath}`
       commitMessage = `📄 Wijzig document ${key}`
     }
+  } else if (element.hasAttribute('data-pdf')) {
+    const newFiles = await openModal('Document aanpassen', {
+      subtitle: `Huidig bestand: <a href="${element.getAttribute('data-pdf')}" target="_blank">${decodeURIComponent(element.getAttribute('data-pdf').split('/').pop())}</a>`,
+      type: 'file',
+      accept: 'application/pdf',
+    })
+    if (!newFiles || newFiles.length === 0) {
+      return false
+    }
+    const pdfFile = newFiles[0]
+    if (pdfFile.size > 25 * 1024 * 1024) {
+      throw new Error('Document is te groot (max 25MB)')
+    }
+    const pdfPath = `assets/pdf/${encodeURIComponent(pdfFile.name)}`
+    await uploadFile(pdfPath, key, pdfFile)
+    element.setAttribute('data-pdf', `/${pdfPath}`)
+    commitMessage = `📄 Wijzig document ${key}`
   } else if (element instanceof HTMLPictureElement) {
     // Afbeelding
     const imgElement = element.querySelector('img')
@@ -345,6 +362,8 @@ function inlineHtmlToMarkdown(element) {
       md += `**${child.textContent.replace(/\s+/g, ' ').trim()}**`
     } else if (child instanceof HTMLElement && child.tagName === 'EM') {
       md += `*${child.textContent.replace(/\s+/g, ' ').trim()}*`
+    } else {
+      throw new Error('Deze tekst is te complex om te bewerken.')
     }
   }
   return md.trim()
