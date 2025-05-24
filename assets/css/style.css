@@ -478,7 +478,7 @@ footer .editor:hover {
   padding: 4px 8px;
 }
 
-.geschiedenis p:first-child {
+.geschiedenis-first p:first-child {
   padding: 6px 8px;
   font-style: italic;
   font-weight: bold;
