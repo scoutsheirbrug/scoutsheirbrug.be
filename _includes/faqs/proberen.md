@@ -1,1 +1,0 @@
-Je kind kan 2 keer komen proberen vooraleer je dient in te schrijven. We raden dit zelfs aan, zodat we al eens kunnen kennismaken. Kom gerust een kwartiertje vroeger of blijf plakken na de vergadering om te babbelen met de leiding!
