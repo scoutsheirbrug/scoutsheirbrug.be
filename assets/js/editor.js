@@ -1,7 +1,6 @@
 const TOKEN_KEY = 'scoutsheirbrug-token'
 const EDITING_KEY = 'scoutsheirbrug-editing'
 const REPO = 'scoutsheirbrug/scoutsheirbrug.be'
-const REF = 'no-jekyll'
 
 const editorButton = document.querySelector('footer .editor')
 if (editorButton) {
@@ -72,7 +71,7 @@ function disableEditor() {
 async function makeEdit(key) {
   // 1. Huidige broncode ophalen van GitHub
   const path = `${location.pathname.replace(/^\//, '')}index.html`
-  const getRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=${REF}`, {
+  const getRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
     },
@@ -173,7 +172,6 @@ async function makeEdit(key) {
     },
     body: JSON.stringify({
       message: commitMessage ?? `✏️ Bewerk ${key}`,
-      branch: REF,
       content: btoa(newTextUtf8),
       sha: getData.sha,
     })
@@ -197,7 +195,7 @@ async function uploadFile(path, key, file) {
     reader.onerror = reject
     reader.readAsDataURL(file)
   })
-  const checkRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}?ref=${REF}`, {
+  const checkRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
     headers: {
       'Authorization': `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
     },
@@ -211,7 +209,6 @@ async function uploadFile(path, key, file) {
     },
     body: JSON.stringify({
       message: `⬆️ Upload ${key}: ${decodeURIComponent(path)}`,
-      branch: REF,
       content: base64,
       sha: existingSha,
     }),
