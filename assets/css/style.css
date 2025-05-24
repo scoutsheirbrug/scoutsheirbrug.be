@@ -38,6 +38,10 @@ body::-webkit-scrollbar {
   max-width: 800px;
 }
 
+.spacing-top {
+  padding-top: 20px;
+}
+
 a {
   text-decoration: none;
 }
@@ -318,52 +322,6 @@ footer .editor:hover {
   to { top: 10px; }
 }
 
-/* ABOUT-US */
-
-.about-us {
-  padding: 50px 0px;
-  background-color: #f4f4f4;
-}
-
-.about-us .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.about-us .eye-catcher {
-  position: relative;
-  width: 300px;
-  flex-basis: 30%;
-  min-height: 200px;
-  border-top: 10px solid var(--accent-1);
-}
-
-.about-us .eye-catcher h3 {
-  position: absolute;
-  top: 10px;
-  text-align: center;
-  font-size: 36px;
-}
-
-.about-us .articles {
-  flex-basis: 70%;
-  height: 70%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about-us .articles article {
-  width: 33%;
-  padding: 20px;
-  text-align: justify;
-}
-
-.about-us .articles article h4 {
-  font-size: 16px;
-  padding: 5px 0;
-}
-
 /* INSCHRIJVEN */
 
 .inschrijven .container {
@@ -382,21 +340,24 @@ footer .editor:hover {
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
-.uniform article {
-  text-align: justify;
+.uniform .container div {
   margin: 0px 10px;
 }
 
-.uniform article h3 {
+.uniform h3 {
   padding-bottom: 10px;
 }
 
-.uniform img {
-  width: 400px;
+.uniform picture {
+  flex-shrink: 0;
+  width: 300px;
   height: 100%;
-  margin: 15px;
+}
+
+.uniform img {
   border-radius: 20px;
 }
 
@@ -506,7 +467,6 @@ footer .editor:hover {
 
 .box p {
   padding: 10px 25px;
-  text-align: justify;
 }
 
 .box hr {
@@ -585,10 +545,6 @@ footer .editor:hover {
   padding: 0;
 }
 
-.startdag article {
-  padding-top: 20px;
-}
-
 .startdag h2 {
   padding-bottom: 20px;
   font-size: 30px;
@@ -644,7 +600,6 @@ footer .editor:hover {
   height: 100%;
   padding: 20px;
   overflow: hidden;
-  text-align: justify;
   align-items: start;
 }
 
@@ -764,7 +719,6 @@ section embed {
   display: flex;
   align-items: flex-start;
   overflow: hidden;
-  text-align: justify;
 }
 
 .groepsadmin .step.step-content {
@@ -1241,10 +1195,6 @@ body.pdf-enlarged footer {
     height: 1900px;
   }
 
-  .about-us .articles article {
-    width: 50%;
-  }
-
   .takken .tak {
     flex-direction: column !important;
     align-items: center;
@@ -1358,33 +1308,12 @@ body.pdf-enlarged footer {
     height: 1410px;
   }
 
-  .about-us .container {
-    flex-direction: row;
-  }
-
-  .about-us .eye-catcher {
-    height: 300px;
-    border-top: none;
-    border-left: 10px solid var(--accent-1);
-  }
-
-  .about-us .eye-catcher h3 {
-    left: 5%;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: unset;
-  }
-
-  .about-us .articles article {
-    width: 50%;
-  }
-
   .uniform .container {
     flex-direction: row;
   }
 
-  .uniform img {
-    width: 40%;
+  .uniform picture {
+    width: 30%;
   }
 
   .foto-list {
@@ -1400,10 +1329,6 @@ body.pdf-enlarged footer {
 
 /* Extra Large */
 @media screen and (min-width: 1160px) {
-  .about-us .articles article {
-    width: 33%;
-  }
-
   .foto {
     flex-basis: calc(16.666% - 4px);
   }
