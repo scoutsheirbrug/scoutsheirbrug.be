@@ -64,9 +64,14 @@
       <a href="/assets/pdf/Huurovereenkomst2025.pdf" target="_blank" class="button" data-edit="huurovereenkomst">
         Huurovereenkomst
       </a>
-      <hr>
-      <h3>Kalender</h3>
-      <iframe src="https://embed.styledcalendar.com/#TTRJ2wTDlIpgDqYfVsY0" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+      <div data-edit="verhuur-kalender">
+        <hr>
+        <h3>Kalender</h3>
+      </div>
+      <div data-iframe data-edit="verhuur-kalender-iframe">
+        <iframe src="https://embed.styledcalendar.com/#TTRJ2wTDlIpgDqYfVsY0" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;">
+        </iframe>
+      </div>
       <script async="" type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
       <div data-edit="verhuur-2">
         <p>
@@ -79,8 +84,10 @@
           Graag eerst onze verhuurkalender raadplegen om te zien of de datum van je gewenste weekend nog vrij is!
         </p>
       </div>
-      <hr>
-      <h3>Foto's</h3>
+      <div data-edit="verhuur-fotos">
+        <hr>
+        <h3>Foto's</h3>
+      </div>
     </div>
     <div class="foto-album-verhuur"></div>
   </section>
