@@ -129,7 +129,7 @@ header nav > a img {
   margin: 10px;
 }
 
-header nav li.active a {
+header nav li a.active {
   font-weight: bold;
   color: var(--accent-4);
 }
