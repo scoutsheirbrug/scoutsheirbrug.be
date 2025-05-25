@@ -127,6 +127,7 @@ async function makeEdit(key) {
       commitMessage = `📄 Wijzig document ${key}`
     }
   } else if (element.hasAttribute('data-pdf')) {
+    // PDF document
     const newFiles = await openModal('Document aanpassen', {
       subtitle: `Huidig bestand: <a href="${element.getAttribute('data-pdf')}" target="_blank">${decodeURIComponent(element.getAttribute('data-pdf').split('/').pop())}</a>`,
       type: 'file',
@@ -167,6 +168,21 @@ async function makeEdit(key) {
     hasChanged = true
     imgElement.src = `/${imagePath}`
     commitMessage = `🖼️ Wijzig afbeelding ${key}`
+  } else if (element.hasAttribute('data-iframe')) {
+    // Iframe source
+    const iframe = element.querySelector('iframe')
+    if (!iframe) {
+      throw new Error('Element bevat geen iframe')
+    }
+    const newSrc = await openModal('Link aanpassen', { value: iframe.src })
+    if (!newSrc || iframe.src === newSrc) {
+      return false
+    }
+    if (!newSrc.startsWith('https://')) {
+      throw new Error('Link moet beginnen met https://')
+    }
+    iframe.src = newSrc
+    commitMessage = `🪟 Wijzig iframe ${key}`
   } else if (element instanceof HTMLDivElement) {
     // Tekst
     const markdown = htmlToMarkdown(element)
