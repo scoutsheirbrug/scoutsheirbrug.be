@@ -85,6 +85,10 @@ async function makeEdit(key) {
   const doc = parser.parseFromString(text, 'text/html')
   const element = doc.querySelector(`[data-edit=${key}]`)
 
+  if (!element) {
+    throw new Error('Kan dit element niet bewerken')
+  }
+
   let hasChanged = false
   let commitMessage = undefined
 
@@ -338,6 +342,8 @@ function htmlToMarkdown(element) {
         md += `- ${inlineHtmlToMarkdown(item)}\n`
       }
       md += '\n'
+    } else if (child instanceof HTMLHRElement) {
+      md += '---\n\n'
     } else {
       throw new Error('Deze tekst is te complex om te bewerken.')
     }
@@ -403,6 +409,13 @@ function markdownToHtml(md, indentLevel) {
   while (i < lines.length) {
     const line = lines[i].trim()
     if (!line) {
+      i++
+      continue
+    }
+
+    // Horizontal Rule
+    if (line.match(/^-{3,}$/)) {
+      html += `${i1}<hr>\n`
       i++
       continue
     }
