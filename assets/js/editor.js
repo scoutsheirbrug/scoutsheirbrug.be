@@ -206,7 +206,7 @@ async function makeEdit(key) {
     return hasChanged
   }
   const newTextUtf8 = unescape(encodeURIComponent(newText))
-  const putRes = await fetch (`https://api.github.com/repos/${REPO}/contents/${path}`, {
+  const putRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
     method: 'PUT',
     headers: {
       'Authorization': `Bearer ${localStorage.getItem(TOKEN_KEY)}`,
@@ -361,7 +361,8 @@ function htmlToMarkdown(element) {
     } else if (child instanceof HTMLHRElement) {
       md += '---\n\n'
     } else {
-      throw new Error('Deze tekst is te complex om te bewerken.')
+      console.warn('Element is te complex om te bewerken:', child)
+      md += '???'
     }
   }
   return md.trimEnd() + '\n'
@@ -384,8 +385,11 @@ function inlineHtmlToMarkdown(element) {
       md += `**${child.textContent.replace(/\s+/g, ' ').trim()}**`
     } else if (child instanceof HTMLElement && child.tagName === 'EM') {
       md += `*${child.textContent.replace(/\s+/g, ' ').trim()}*`
+    } else if (child instanceof HTMLBRElement) {
+      md += `\\\n`
     } else {
-      throw new Error('Deze tekst is te complex om te bewerken.')
+      console.warn('Element is te complex om te bewerken:', child)
+      md += '???'
     }
   }
   return md.trim()
@@ -483,7 +487,8 @@ function inlineMarkdownToHtml(text) {
     const linkMatch = text.match(/\[([^\]]+)\]\(([^)]+)\)/)
     const boldMatch = text.match(/\*\*([^*]+)\*\*/)
     const italicMatch = text.match(/\*([^*]+)\*/)
-    const matches = [linkMatch, boldMatch, italicMatch]
+    const breakMatch = text.match(/\\$/)
+    const matches = [linkMatch, boldMatch, italicMatch, breakMatch]
       .filter(m => m)
       .sort((a, b) => a.index - b.index)
 
@@ -504,6 +509,8 @@ function inlineMarkdownToHtml(text) {
       html += `<strong>${escapeHtml(match[1])}</strong>`
     } else if (match === italicMatch) {
       html += `<em>${escapeHtml(match[1])}</em>`
+    } else if (match === breakMatch) {
+      html += '<br>'
     }
     text = text.substring(match.index + match[0].length)
   }
