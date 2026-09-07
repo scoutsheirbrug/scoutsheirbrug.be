@@ -362,7 +362,7 @@ function htmlToMarkdown(element) {
       md += '---\n\n'
     } else {
       console.warn('Element is te complex om te bewerken:', child)
-      md += '???'
+      throw new Error('Deze tekst is te complex om te bewerken.')
     }
   }
   return md.trimEnd() + '\n'
@@ -389,7 +389,7 @@ function inlineHtmlToMarkdown(element) {
       md += `\\\n`
     } else {
       console.warn('Element is te complex om te bewerken:', child)
-      md += '???'
+      throw new Error('Deze tekst is te complex om te bewerken.')
     }
   }
   return md.trim()
